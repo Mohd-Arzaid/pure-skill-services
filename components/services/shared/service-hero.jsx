@@ -50,7 +50,7 @@ const ServiceHero = ({
             {headingLower}
           </h1>
 
-          <p className="font-poppins text-[18px] md:text-[20px] z-[10] leading-[1.6] md:leading-[40px] text-[#332156] max-w-[490px] -mt-2">
+          <p className="font-inter text-[18px] md:text-[20px] z-[10] leading-[1.6] md:leading-[40px] text-[#332156] max-w-[490px] -mt-2">
             {description}
           </p>
 
@@ -62,7 +62,7 @@ const ServiceHero = ({
               <div className="w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#125E5A]/30 group-hover:border-[#125E5A] transition-all duration-300 mr-3">
                 <div className="w-3 h-3 border-t-2 border-r-2 border-[#125E5A] rotate-45 translate-x-[-1px]"></div>
               </div>
-              <span className="font-geist text-[#125E5A] text-[18px] font-medium group-hover:translate-x-1 transition-all duration-300">
+              <span className="font-inter text-[#125E5A] text-[18px] font-medium group-hover:translate-x-1 transition-all duration-300">
                 {cta}
               </span>
             </div>
@@ -77,5 +77,3 @@ const ServiceHero = ({
 };
 
 export default ServiceHero;
-
-

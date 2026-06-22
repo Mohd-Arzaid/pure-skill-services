@@ -60,7 +60,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
   return (
     <div className="z-20 w-full md:w-[580px] h-auto md:h-[435px] flex flex-col">
       <div className="flex w-full items-center gap-3">
-        <span className="uppercase font-poppins font-semibold text-[18px] md:text-[20px] text-[#008080]">
+        <span className="uppercase font-inter font-semibold text-[18px] md:text-[20px] text-[#008080]">
           {text.contactUs}
         </span>
         <Separator className="w-[94.46px] h-[2px] bg-[#008080]" />
@@ -70,9 +70,9 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
         {text.bookAnAppointment}
       </div>
 
-      <p className="font-medium font-poppins text-[18px] md:text-[20px] text-[#996C6C]">
+      <p className="font-medium font-inter text-[18px] md:text-[20px] text-[#996C6C]">
         {text.subtitle}
-        <span className="text-black"> {text.tryNow}</span>
+        <span className="text-black font-inter"> {text.tryNow}</span>
       </p>
 
       <form className="flex flex-col mt-5 gap-5">
@@ -84,7 +84,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             onChange={handleOnChange}
             placeholder={text.fullName}
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-poppins font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-poppins placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
 
           <Input
@@ -94,7 +94,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             onChange={handleOnChange}
             placeholder={text.emailAddress}
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-poppins font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-poppins placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
         </div>
 
@@ -106,7 +106,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             onChange={handleOnChange}
             placeholder={text.contactNumber}
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-poppins font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-poppins placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
 
           <Input
@@ -116,7 +116,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             onChange={handleOnChange}
             placeholder={text.companyName}
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-poppins font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-poppins placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
         </div>
 
@@ -128,7 +128,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             onChange={handleOnChange}
             placeholder={text.productName}
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-poppins font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-poppins placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
 
           <Input
@@ -138,16 +138,16 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             onChange={handleOnChange}
             placeholder={text.requiredCertification}
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-poppins font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-poppins placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
         </div>
 
         <Button
           type="button"
-          className="disabled:opacity-100 mt-1 w-[218px] h-[50px] md:h-[60px] bg-[#1A8781] hover:bg-[#1A8781]/90 rounded-[5px] text-[15px] md:text-[15px] font-poppins tracking-wide leading-[28px] shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
+          className="disabled:opacity-100 mt-1 w-[218px] h-[50px] md:h-[60px] bg-[#1A8781] hover:bg-[#1A8781]/90 rounded-[5px] text-[15px] md:text-[15px] font-inter tracking-wide leading-[28px] shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
         >
           <div className="flex gap-3 items-center justify-center">
-            <span>{text.bookAppointment}</span>
+            <span className="font-inter">{text.bookAppointment}</span>
           </div>
         </Button>
       </form>
