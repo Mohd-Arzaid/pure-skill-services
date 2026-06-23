@@ -12,7 +12,7 @@ export const SectionHeadingTwo = ({ children, className }) => (
 );
 
 export const ServiceImage = ({ src, alt, title, className }) => (
-  <Image
+  <img
     src={src}
     alt={alt}
     title={title}
