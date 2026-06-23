@@ -35,26 +35,30 @@ export const ServiceImage = ({ src, alt, title, className }) => (
   />
 );
 
-export const SectionHeadingThree = ({ children, className }) => (
-  <div
+export const SectionHeadingThree = ({
+  as: Tag = "h3",
+  children,
+  className,
+}) => (
+  <Tag
     className={cn(
       "font-semibold font-inter text-lg md:text-xl text-neutral-800",
       className
     )}
   >
     {children}
-  </div>
+  </Tag>
 );
 
 export const ServiceParagraph = ({ children, className }) => (
-  <div
+  <p
     className={cn(
       "font-inter text-base md:text-lg text-neutral-600",
       className
     )}
   >
     {children}
-  </div>
+  </p>
 );
 
 export const ServiceSeparator = ({ className }) => (
