@@ -2,6 +2,7 @@ import {
   SectionHeadingThree,
   SectionHeadingTwo,
   ServiceImage,
+  ServiceList,
   ServiceParagraph,
 } from "../shared/service-content";
 import ServicePageLayout from "../shared/service-page-layout";
@@ -14,7 +15,7 @@ const hero = {
 };
 
 const intro = (
-  <div className="flex flex-col gap-3 md:gap-5">
+  <div className="flex flex-col gap-5">
     <SectionHeadingTwo as="h1">
       BIS Certification under FMCS Scheme
     </SectionHeadingTwo>
@@ -58,7 +59,7 @@ const intro = (
 
 const OverviewSection = () => {
   return (
-    <div className="flex flex-col gap-3 md:gap-5">
+    <div className="flex flex-col gap-5">
       <SectionHeadingTwo>
         What is Foreign Manufacturers Certification Scheme (BIS FMCS)
       </SectionHeadingTwo>
@@ -74,6 +75,16 @@ const OverviewSection = () => {
       </ServiceParagraph>
 
       <SectionHeadingThree>Key Features and Scopes</SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Target: BIS FMCS covers manufacturing units located outside India. The scheme is available to manufacturers only; importers and traders cannot obtain a BIS licence under FMCS.",
+          "Testing facilities: The manufacturing unit must have adequate in-house testing facilities and technically qualified quality control personnel to test products as per Indian Standards.",
+          "Authorized Indian Representative (AIR): The foreign manufacturer must appoint an Indian resident as AIR to act as the local point of contact with BIS for compliance management.",
+          "Products coverage: A wide range of products notified under Quality Control Orders (QCOs) issued by the Indian government—such as steel, cement, electrical appliances, chemicals, automotive parts, toys, and more.",
+          "Exclusions: Electronics and IT products are excluded from this scheme; they are covered under the Bureau of Indian Standards Compulsory Registration Scheme (CRS).",
+        ]}
+      />
     </div>
   );
 };
