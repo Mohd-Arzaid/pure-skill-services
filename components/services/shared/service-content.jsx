@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 export const ServiceIndexHeading = ({ children, className }) => (
-  <div className="flex w-full items-center gap-3">
+  <div className="flex w-full items-center gap-3 mb-3 md:mb-5">
     <div
       className={cn(
         "uppercase font-semibold font-inter text-base md:text-xl text-neutral-800",
@@ -15,15 +15,15 @@ export const ServiceIndexHeading = ({ children, className }) => (
   </div>
 );
 
-export const SectionHeadingTwo = ({ children, className }) => (
-  <div
+export const SectionHeadingTwo = ({ as: Tag = "h2", children, className }) => (
+  <Tag
     className={cn(
       "text-2xl md:text-4xl font-inter font-bold text-neutral-800",
       className
     )}
   >
     {children}
-  </div>
+  </Tag>
 );
 
 export const ServiceImage = ({ src, alt, title, className }) => (

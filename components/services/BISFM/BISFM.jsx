@@ -14,8 +14,10 @@ const hero = {
 };
 
 const intro = (
-  <div className="flex flex-col gap-5">
-    <SectionHeadingTwo>BIS Certification under FMCS Scheme</SectionHeadingTwo>
+  <div className="flex flex-col gap-3 md:gap-5">
+    <SectionHeadingTwo as="h1">
+      BIS Certification under FMCS Scheme
+    </SectionHeadingTwo>
 
     <ServiceImage
       src="/images/services/BISFM/BISCertificationforForeignManufacaturers.webp"
@@ -56,9 +58,23 @@ const intro = (
 
 const OverviewSection = () => {
   return (
-    <SectionHeadingTwo>
-      What is Foreign Manufacturers Certification Scheme (BIS FMCS)
-    </SectionHeadingTwo>
+    <div className="flex flex-col gap-3 md:gap-5">
+      <SectionHeadingTwo>
+        What is Foreign Manufacturers Certification Scheme (BIS FMCS)
+      </SectionHeadingTwo>
+
+      <ServiceParagraph>
+        Foreign manufacturers certification scheme (FMCS) was introduced by the
+        Bureau of Indian Standards in 2000 that allows the overseas
+        manufacturers to use the standard mark (ISI Mark) on their products
+        exported to India. Just like the Product Certification Scheme for Indian
+        manufacturers, BIS FMCS scheme ensures that the products manufactured
+        outside India must meet the same safety and quality standards benchmarks
+        before being exported and sold in the Indian market.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>Key Features and Scopes</SectionHeadingThree>
+    </div>
   );
 };
 

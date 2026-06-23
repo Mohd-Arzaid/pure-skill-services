@@ -15,6 +15,7 @@ const ServicePageLayout = ({ breadcrumbLabel, hero, intro, sections }) => {
         headingUpper={hero.headingUpper}
         headingLower={hero.headingLower}
         description={hero.description}
+        headingAs={hero.headingAs}
       />
       <ServiceIndex index={sections} />
 
