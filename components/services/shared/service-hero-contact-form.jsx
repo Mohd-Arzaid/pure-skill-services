@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
-import { Button } from "@/components/ui/button";
+
+// Input field common className - update only text and placeholder color to match service-hero.jsx
+const inputFieldClass =
+  "disabled:opacity-100 py-3 px-4 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] text-[#332156] font-inter text-sm md:text-base placeholder:text-[#332156] placeholder:font-inter  placeholder:text-sm";
 
 // Static hero contact form (UI only; backend wiring intentionally not implemented).
 const ServiceHeroContactForm = () => {
@@ -27,98 +29,100 @@ const ServiceHeroContactForm = () => {
   };
 
   return (
-    <div className="z-20 w-full md:w-[580px] h-auto md:h-[435px] flex flex-col">
-      <div className="flex w-full items-center gap-3">
-        <span className="uppercase font-inter font-semibold text-[18px] md:text-[20px] text-[#008080]">
-          Contact Us
-        </span>
-        <Separator className="w-[94.46px] h-[2px] bg-[#008080]" />
+    <div className="z-20 w-full md:max-w-lg flex flex-col">
+      <div className="flex flex-col gap-2">
+        <div className="flex w-full items-center gap-3">
+          <span className="uppercase font-inter font-medium text-sm md:text-base text-[#1A8781]">
+            Contact Us
+          </span>
+          <Separator className="w-20 h-[2px] bg-[#1A8781]" />
+        </div>
+
+        <div className="text-3xl md:text-4xl font-inter font-bold text-neutral-800">
+          Book an Appointment
+        </div>
+
+        <p className="font-medium font-inter text-sm md:text-base text-neutral-600">
+          Want to contact our team and schedule a call?
+          <span className="text-neutral-800 font-inter"> Try Now</span>
+        </p>
       </div>
 
-      <div className="text-[30px] md:text-[48px] font-inter font-bold text-[#1E1E1E]">
-        Book an Appointment
-      </div>
-
-      <p className="font-medium font-inter text-[18px] md:text-[20px] text-[#996C6C]">
-        Want to contact our team and schedule a call?
-        <span className="text-black font-inter"> Try Now</span>
-      </p>
-
-      <form className="flex flex-col mt-5 gap-5">
+      <form className="flex flex-col mt-8 gap-5">
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-          <Input
+          <input
             type="text"
             name="fullName"
             value={fullName}
             onChange={handleOnChange}
             placeholder="Full Name *"
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className={inputFieldClass}
           />
 
-          <Input
+          <input
             type="email"
             name="email"
             value={email}
             onChange={handleOnChange}
             placeholder="Email Address *"
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className={inputFieldClass}
           />
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-          <Input
+          <input
             type="tel"
             name="phoneNumber"
             value={phoneNumber}
             onChange={handleOnChange}
             placeholder="Contact Number *"
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className={inputFieldClass}
           />
 
-          <Input
+          <input
             type="text"
             name="companyName"
             value={companyName}
             onChange={handleOnChange}
             placeholder="Company Name *"
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className={inputFieldClass}
           />
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-5">
-          <Input
+          <input
             type="text"
             name="productName"
             value={productName}
             onChange={handleOnChange}
             placeholder="Product Name *"
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className={inputFieldClass}
           />
 
-          <Input
+          <input
             type="text"
             name="message"
             value={message}
             onChange={handleOnChange}
             placeholder="Required Certification*"
             required
-            className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
+            className={inputFieldClass}
           />
         </div>
 
-        <Button
+        <button
           type="button"
-          className="disabled:opacity-100 mt-1 w-[218px] h-[50px] md:h-[60px] bg-[#1A8781] hover:bg-[#1A8781]/90 rounded-[5px] text-[15px] md:text-[15px] font-inter tracking-wide leading-[28px] shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
+          className="disabled:opacity-100 mt-3 w-[218px] py-3  bg-[#1A8781] hover:bg-[#125E5A]/90 rounded-[5px] text-sm md:text-base font-inter shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
         >
           <div className="flex gap-3 items-center justify-center">
-            <span className="font-inter">Book Appointment</span>
+            <span className="font-inter text-white">Book Appointment</span>
           </div>
-        </Button>
+        </button>
       </form>
     </div>
   );

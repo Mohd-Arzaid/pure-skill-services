@@ -8,8 +8,7 @@ import {
 import ServicePageLayout from "../shared/service-page-layout";
 
 const hero = {
-  headingUpper: "BIS Certification",
-  headingLower: "for foreign manufactures",
+  heading: "BIS Certification for Foreign Manufacturers",
   description:
     "Foreign manufacturers need ISI mark for exports to India. Covers 600+ mandatory products and 20,000+ voluntary products.",
 };
