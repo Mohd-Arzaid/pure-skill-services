@@ -4,6 +4,7 @@ import {
   ServiceImage,
   ServiceList,
   ServiceParagraph,
+  ServiceTable,
 } from "../shared/service-content";
 import ServicePageLayout from "../shared/service-page-layout";
 
@@ -53,7 +54,6 @@ const intro = (
       compliance, documentation and communication with the Bureau of Indian
       Standards.
     </ServiceParagraph>
-
   </div>
 );
 
@@ -114,6 +114,26 @@ const OverviewSection = () => {
       <SectionHeadingThree>
         Key Features of BIS certificate for foreign manufacturers
       </SectionHeadingThree>
+
+      <ServiceTable
+        headers={["FEATURE", "DESCRIPTION"]}
+        rows={[
+          ["Applicability", "Foreign manufacturers only"],
+          ["Marking", "ISI mark + CM/L number"],
+          ["Audit Requirement", "Mandatory factory inspection"],
+          ["Testing", "Conducted at BIS-approved Indian labs"],
+          ["Validity", "BIS license valid for 1-2 years"],
+          ["Renewal", "Required upon expiry or product updates"],
+          [
+            "AIR (Authorized Indian Representative)",
+            "Must be appointed to liaise with BIS",
+          ],
+          [
+            "Performance Bank Guarantee",
+            "Required from RBI-approved Indian bank",
+          ],
+        ]}
+      />
     </div>
   );
 };

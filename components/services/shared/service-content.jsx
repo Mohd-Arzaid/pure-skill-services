@@ -1,3 +1,12 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableRow,
+  TableHead,
+} from "@/components/ui/table";
+
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 
@@ -79,4 +88,57 @@ export const ServiceList = ({ as: Tag = "p", points, className }) => (
       </li>
     ))}
   </ul>
+);
+
+export const ServiceTable = ({
+  headers,
+  rows,
+  emphasizeAllColumns = false,
+}) => (
+  <div className="overflow-x-auto my-2">
+    <Table className="min-w-full border border-neutral-200 rounded-lg overflow-hidden">
+      <TableHeader>
+        <TableRow className="bg-[#F9F7F2] hover:bg-[#F9F7F2]/80">
+          {headers.map((header, index) => (
+            <TableHead
+              key={index}
+              className={cn(
+                "font-semibold font-inter text-left text-base md:text-lg px-4 md:px-6 py-3 md:py-4 text-neutral-800",
+                index < headers.length - 1 && "border-r border-neutral-200"
+              )}
+            >
+              {header}
+            </TableHead>
+          ))}
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {rows.map((row, rowIndex) => (
+          <TableRow
+            key={rowIndex}
+            className="hover:bg-neutral-50 transition-colors"
+          >
+            {row.map((cell, cellIndex) => {
+              const isLastColumn = cellIndex === row.length - 1;
+              const isEmphasized = emphasizeAllColumns || !isLastColumn;
+              return (
+                <TableCell
+                  key={cellIndex}
+                  className={cn(
+                    "font-inter text-sm md:text-base px-4 md:px-6 py-3 md:py-4",
+                    isEmphasized
+                      ? "font-medium text-neutral-800"
+                      : "text-neutral-600",
+                    !isLastColumn && "border-r border-neutral-200"
+                  )}
+                >
+                  {cell}
+                </TableCell>
+              );
+            })}
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
+  </div>
 );
