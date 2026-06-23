@@ -9,10 +9,7 @@ import {
 import Link from "next/link";
 import { SlashIcon } from "lucide-react";
 
-const ServiceBreadcrumb = ({ label, lang = "en" }) => {
-  const homeLabel = lang === "es" ? "Inicio" : "Home";
-  const homeHref = lang === "es" ? "/es" : "/";
-
+const ServiceBreadcrumb = ({ label }) => {
   return (
     <div className="absolute left-0 top-3 z-30 w-full md:top-5">
       <div className="mx-auto max-w-[80rem] px-4">
@@ -22,7 +19,7 @@ const ServiceBreadcrumb = ({ label, lang = "en" }) => {
               <BreadcrumbList className="flex-nowrap">
                 <BreadcrumbItem className="flex-shrink-0">
                   <BreadcrumbLink asChild>
-                    <Link href={homeHref}>{homeLabel}</Link>
+                    <Link href="/">Home</Link>
                   </BreadcrumbLink>
                 </BreadcrumbItem>
 

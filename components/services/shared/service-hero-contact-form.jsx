@@ -5,39 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 import { Button } from "@/components/ui/button";
 
-const FORM_TEXT = {
-  en: {
-    contactUs: "Contact Us",
-    bookAnAppointment: "Book an Appointment",
-    subtitle: "Want to contact our team and schedule a call?",
-    tryNow: "Try Now",
-    fullName: "Full Name *",
-    emailAddress: "Email Address *",
-    contactNumber: "Contact Number *",
-    companyName: "Company Name *",
-    productName: "Product Name *",
-    requiredCertification: "Required Certification*",
-    bookAppointment: "Book Appointment",
-  },
-  es: {
-    contactUs: "Contáctenos",
-    bookAnAppointment: "Reservar una Cita",
-    subtitle: "¿Quiere contactar a nuestro equipo y programar una llamada?",
-    tryNow: "Inténtelo Ahora",
-    fullName: "Nombre Completo *",
-    emailAddress: "Correo Electrónico *",
-    contactNumber: "Número de Contacto *",
-    companyName: "Nombre de la Empresa *",
-    productName: "Nombre del Producto *",
-    requiredCertification: "Certificación Requerida*",
-    bookAppointment: "Reservar Cita",
-  },
-};
-
 // Static hero contact form (UI only; backend wiring intentionally not implemented).
-const ServiceHeroContactForm = ({ lang = "en" }) => {
-  const text = FORM_TEXT[lang];
-
+const ServiceHeroContactForm = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -61,18 +30,18 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
     <div className="z-20 w-full md:w-[580px] h-auto md:h-[435px] flex flex-col">
       <div className="flex w-full items-center gap-3">
         <span className="uppercase font-inter font-semibold text-[18px] md:text-[20px] text-[#008080]">
-          {text.contactUs}
+          Contact Us
         </span>
         <Separator className="w-[94.46px] h-[2px] bg-[#008080]" />
       </div>
 
       <div className="text-[30px] md:text-[48px] font-inter font-bold text-[#1E1E1E]">
-        {text.bookAnAppointment}
+        Book an Appointment
       </div>
 
       <p className="font-medium font-inter text-[18px] md:text-[20px] text-[#996C6C]">
-        {text.subtitle}
-        <span className="text-black font-inter"> {text.tryNow}</span>
+        Want to contact our team and schedule a call?
+        <span className="text-black font-inter"> Try Now</span>
       </p>
 
       <form className="flex flex-col mt-5 gap-5">
@@ -82,7 +51,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             name="fullName"
             value={fullName}
             onChange={handleOnChange}
-            placeholder={text.fullName}
+            placeholder="Full Name *"
             required
             className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
@@ -92,7 +61,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             name="email"
             value={email}
             onChange={handleOnChange}
-            placeholder={text.emailAddress}
+            placeholder="Email Address *"
             required
             className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
@@ -104,7 +73,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             name="phoneNumber"
             value={phoneNumber}
             onChange={handleOnChange}
-            placeholder={text.contactNumber}
+            placeholder="Contact Number *"
             required
             className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
@@ -114,7 +83,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             name="companyName"
             value={companyName}
             onChange={handleOnChange}
-            placeholder={text.companyName}
+            placeholder="Company Name *"
             required
             className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
@@ -126,7 +95,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             name="productName"
             value={productName}
             onChange={handleOnChange}
-            placeholder={text.productName}
+            placeholder="Product Name *"
             required
             className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
@@ -136,7 +105,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
             name="message"
             value={message}
             onChange={handleOnChange}
-            placeholder={text.requiredCertification}
+            placeholder="Required Certification*"
             required
             className="disabled:opacity-100 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] h-[54px] md:h-[58px] text-[#7E7E7E]/90 font-inter font-semibold text-[15px] md:text-[16px] leading-[24px] tracking-wide px-5 placeholder:text-[#7E7E7E]/90 placeholder:font-inter placeholder:font-semibold placeholder:leading-[24px] placeholder:tracking-wide"
           />
@@ -147,7 +116,7 @@ const ServiceHeroContactForm = ({ lang = "en" }) => {
           className="disabled:opacity-100 mt-1 w-[218px] h-[50px] md:h-[60px] bg-[#1A8781] hover:bg-[#1A8781]/90 rounded-[5px] text-[15px] md:text-[15px] font-inter tracking-wide leading-[28px] shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
         >
           <div className="flex gap-3 items-center justify-center">
-            <span className="font-inter">{text.bookAppointment}</span>
+            <span className="font-inter">Book Appointment</span>
           </div>
         </Button>
       </form>

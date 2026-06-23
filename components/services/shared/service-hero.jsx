@@ -1,26 +1,12 @@
 import React from "react";
 import ServiceHeroContactForm from "./service-hero-contact-form";
 
-const HERO_TEXT = {
-  en: {
-    tagline: "Certified Expertise",
-    cta: "View Services",
-  },
-  es: {
-    tagline: "Experiencia Certificada",
-    cta: "Ver Servicios",
-  },
-};
-
 const ServiceHero = ({
   headingUpper,
   headingLower,
   description,
-  lang = "en",
   onViewServices,
 }) => {
-  const { tagline, cta } = HERO_TEXT[lang];
-
   return (
     <div className="relative pt-[60px] md:pt-[104px] pb-[30px] md:pb-[106px] overflow-x-hidden bg-[#F9F7F2]">
       {/* Background gradient */}
@@ -38,7 +24,8 @@ const ServiceHero = ({
           <div className="inline-flex items-center">
             <div className="h-[3px] w-[40px] bg-[#1A8781] mr-4"></div>
             <span className="text-[#1A8781] font-inter text-sm font-medium tracking-wider uppercase">
-              {tagline}
+              {/* tagline direct use karo */}
+              Certified Expertise
             </span>
           </div>
 
@@ -63,14 +50,15 @@ const ServiceHero = ({
                 <div className="w-3 h-3 border-t-2 border-r-2 border-[#125E5A] rotate-45 translate-x-[-1px]"></div>
               </div>
               <span className="font-inter text-[#125E5A] text-[18px] font-medium group-hover:translate-x-1 transition-all duration-300">
-                {cta}
+                {/* cta direct use karo */}
+                View Services
               </span>
             </div>
           </div>
         </div>
 
         {/* Right Side */}
-        <ServiceHeroContactForm lang={lang} />
+        <ServiceHeroContactForm />
       </div>
     </div>
   );
