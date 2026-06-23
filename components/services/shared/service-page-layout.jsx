@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import ServiceBreadcrumb from "./service-breadcrumb";
 import ServiceHero from "./service-hero";
 import ServiceIndex from "./service-index";
+import { ServiceSeparator } from "./service-content";
+import ServiceSection from "./service-section";
 
 const ServicePageLayout = ({ breadcrumbLabel, hero, intro, sections }) => {
   return (
@@ -20,6 +22,14 @@ const ServicePageLayout = ({ breadcrumbLabel, hero, intro, sections }) => {
           <div className="flex-1">
             <div className="flex flex-col gap-[20px] md:gap-[40px]">
               {intro}
+              {sections.map((section, index) => (
+                <Fragment key={section.id}>
+                  {index > 0 && <ServiceSeparator />}
+                  <ServiceSection id={section.id} label={section.label}>
+                    {section.section}
+                  </ServiceSection>
+                </Fragment>
+              ))}
             </div>
           </div>
         </div>

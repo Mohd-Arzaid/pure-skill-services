@@ -1,4 +1,9 @@
-import { SectionHeadingTwo, ServiceImage } from "../shared/service-content";
+import {
+  SectionHeadingThree,
+  SectionHeadingTwo,
+  ServiceImage,
+  ServiceParagraph,
+} from "../shared/service-content";
 import ServicePageLayout from "../shared/service-page-layout";
 
 const hero = {
@@ -9,21 +14,52 @@ const hero = {
 };
 
 const intro = (
-  <div className="flex flex-col gap-2">
+  <div className="flex flex-col gap-5">
     <SectionHeadingTwo>BIS Certification under FMCS Scheme</SectionHeadingTwo>
 
-    <div className="flex justify-center">
-      <ServiceImage
-        src="/images/services/BISFM/BISCertificationforForeignManufacaturers.webp"
-        alt="BIS Certification for Foreign Manufacturers"
-        title="BIS Certification for Foreign Manufacturers"
-      />
-    </div>
+    <ServiceImage
+      src="/images/services/BISFM/BISCertificationforForeignManufacaturers.webp"
+      alt="BIS Certification for Foreign Manufacturers"
+      title="BIS Certification for Foreign Manufacturers"
+    />
+
+    <SectionHeadingThree>What is Indian BIS?</SectionHeadingThree>
+
+    <ServiceParagraph>
+      The Bureau of Indian Standards (BIS) is India's national standards body
+      under the Ministry of Consumer Affairs, Food and Public Distribution.
+      Established under the BIS Act 1986, and revised in 2016, BIS plays a
+      pivotal role in standardization, marking, and quality certification of
+      goods. It aims to ensure the quality, safety, and reliability of products
+      offered to Indian consumers.
+    </ServiceParagraph>
+
+    <ServiceParagraph>
+      A BIS License is mandatory for both Indian and foreign manufacturers to
+      manufacture, import or sell various products in India, listed in the BIS
+      mandatory certification category. To grant licenses BIS operates various
+      certification schemes like Product Certification Scheme (ISI Mark Scheme
+      for Indian Manufacturers), Hallmarking Scheme, BIS FMCS Scheme and many
+      more.
+    </ServiceParagraph>
+
+    <ServiceParagraph>
+      Foreign Manufacturers Certification Scheme (BIS FMCS) enables the overseas
+      manufacturers to apply for BIS certification to use the standard ISI mark
+      on their products. Foreign manufacturers can apply for BIS certification
+      by appointing an Authorized Indian Representative (AIR) to handle
+      compliance, documentation and communication with the Bureau of Indian
+      Standards.
+    </ServiceParagraph>
   </div>
 );
 
 const OverviewSection = () => {
-  return <div className=""></div>;
+  return (
+    <SectionHeadingTwo>
+      What is Foreign Manufacturers Certification Scheme (BIS FMCS)
+    </SectionHeadingTwo>
+  );
 };
 
 const StandardizationSection = () => {
