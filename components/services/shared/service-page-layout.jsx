@@ -4,6 +4,8 @@ import ServiceHero from "./service-hero";
 import ServiceIndex from "./service-index";
 import { ServiceSeparator } from "./service-content";
 import ServiceSection from "./service-section";
+import ServiceAuthor from "./service-author";
+import ServiceRightSideContent from "./service-right-side-content";
 
 const ServicePageLayout = ({ breadcrumbLabel, hero, intro, sections }) => {
   return (
@@ -30,8 +32,12 @@ const ServicePageLayout = ({ breadcrumbLabel, hero, intro, sections }) => {
                   </ServiceSection>
                 </Fragment>
               ))}
+              <ServiceAuthor />
             </div>
           </div>
+
+          {/* Right Side */}
+          <ServiceRightSideContent />
         </div>
       </div>
     </div>
@@ -39,7 +45,3 @@ const ServicePageLayout = ({ breadcrumbLabel, hero, intro, sections }) => {
 };
 
 export default ServicePageLayout;
-
-const ServicesRightSideContentEng = () => {
-  return <div className=""></div>;
-};
