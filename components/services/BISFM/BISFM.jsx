@@ -85,6 +85,35 @@ const OverviewSection = () => {
           "Exclusions: Electronics and IT products are excluded from this scheme; they are covered under the Bureau of Indian Standards Compulsory Registration Scheme (CRS).",
         ]}
       />
+
+      <ServiceParagraph>
+        BIS has listed over 600 products under mandatory certification, and over
+        20,000 items are eligible for a voluntary BIS certificate.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Why BIS Certification is Crucial ?
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        Obtaining a BIS certificate is more than a legal requirement—it's a
+        gateway to India's vast consumer market. Here are a few key reasons why
+        it's essential:
+      </ServiceParagraph>
+
+      <ServiceList
+        points={[
+          "Legal Compliance: Products must comply with relevant Indian standards.",
+          "Brand Credibility: The ISI mark serves as proof of quality and boosts consumer trust.",
+          "Customs Clearance: Without a valid BIS licence, products may be rejected at customs.",
+          "Market Access: Helps foreign brands gain seamless entry and widespread acceptance in India.",
+          "Risk Mitigation: Ensures that products are safe, thus avoiding potential recalls and liability issues.",
+        ]}
+      />
+
+      <SectionHeadingThree>
+        Key Features of BIS certificate for foreign manufacturers
+      </SectionHeadingThree>
     </div>
   );
 };
