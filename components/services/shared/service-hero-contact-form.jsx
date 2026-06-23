@@ -5,7 +5,7 @@ import { Separator } from "@/components/ui/separator";
 
 // Input field common className - update only text and placeholder color to match service-hero.jsx
 const inputFieldClass =
-  "disabled:opacity-100 py-3 px-4 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-[#F9F9F9] border-2 border-[#BDBDBD] rounded-[12px] text-[#332156] font-inter text-sm md:text-base placeholder:text-[#332156] placeholder:font-inter  placeholder:text-sm";
+  "disabled:opacity-100 py-3 px-4 w-full focus-visible:ring-1 focus-visible:ring-[#BDBDBD] focus-visible:ring-offset-0 bg-white border-2 border-[#BDBDBD] rounded-[12px] text-[#332156] font-inter text-sm md:text-base placeholder:text-[#332156] placeholder:font-inter  placeholder:text-sm";
 
 // Static hero contact form (UI only; backend wiring intentionally not implemented).
 const ServiceHeroContactForm = () => {
@@ -32,7 +32,7 @@ const ServiceHeroContactForm = () => {
     <div className="z-20 w-full md:max-w-lg flex flex-col">
       <div className="flex flex-col gap-2">
         <div className="flex w-full items-center gap-3">
-          <span className="uppercase font-inter font-medium text-sm md:text-base text-[#1A8781]">
+          <span className="uppercase font-inter tracking-wider font-semibold text-sm text-[#1A8781]">
             Contact Us
           </span>
           <Separator className="w-20 h-[2px] bg-[#1A8781]" />
@@ -42,7 +42,7 @@ const ServiceHeroContactForm = () => {
           Book an Appointment
         </div>
 
-        <p className="font-medium font-inter text-sm md:text-base text-neutral-600">
+        <p className="font-medium font-inter text-sm md:text-base text-green-800">
           Want to contact our team and schedule a call?
           <span className="text-neutral-800 font-inter"> Try Now</span>
         </p>
@@ -117,7 +117,7 @@ const ServiceHeroContactForm = () => {
 
         <button
           type="button"
-          className="disabled:opacity-100 mt-3 w-[218px] py-3  bg-[#1A8781] hover:bg-[#125E5A]/90 rounded-[5px] text-sm md:text-base font-inter shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
+          className="disabled:opacity-100 mt-3 w-[218px] py-3  bg-[#125E5A]/90 hover:bg-[#125E5A] rounded-[5px] text-sm md:text-base font-inter shadow-elegant transition-all duration-300 hover:translate-y-[-2px]"
         >
           <div className="flex gap-3 items-center justify-center">
             <span className="font-inter text-white">Book Appointment</span>
