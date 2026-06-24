@@ -11,7 +11,7 @@ const ServiceAuthor = () => {
         <div className="relative z-10">
           {/* Header */}
           <div className="flex items-center gap-3 mb-3">
-            <div className="font-inter text-lg md:text-2xl font-semibold text-[#1A8781]">
+            <div className="font-inter text-base md:text-xl font-semibold text-[#1A8781]">
               About the Author
             </div>
             <div className="flex-1 h-px bg-gradient-to-r from-[#1A8781]/20 to-transparent"></div>
@@ -20,10 +20,10 @@ const ServiceAuthor = () => {
           <div className="space-y-3">
             {/* Author name and title */}
             <div>
-              <p className="font-inter text-base md:text-xl font-semibold text-[#131316]">
+              <p className="font-inter text-sm md:text-base font-semibold text-[#131316]">
                 Dhruv Aggarwal
               </p>
-              <p className="font-inter text-sm md:text-lg text-[#42434d]">
+              <p className="font-inter text-xs md:text-sm text-[#42434d]">
                 Head of Operations at Sun Certifications India
               </p>
             </div>
@@ -31,14 +31,14 @@ const ServiceAuthor = () => {
             {/* Experience and achievements with subtle cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3 my-4">
               <div className="flex items-center gap-3 p-3 bg-white/50 rounded-lg border border-[#1A8781]/10 hover:border-[#1A8781]/20 transition-colors duration-200">
-                <p className="font-inter text-sm md:text-lg text-[#42434d]">
+                <p className="font-inter text-xs md:text-sm text-[#42434d]">
                   <span className="font-medium">Experience:</span> 10+ years &
                   Handled 1000+ projects
                 </p>
               </div>
 
               <div className="flex items-center gap-3 p-3 bg-white/50 rounded-lg border border-[#1A8781]/10 hover:border-[#1A8781]/20 transition-colors duration-200">
-                <p className="font-inter text-sm md:text-lg text-[#42434d]">
+                <p className="font-inter text-xs md:text-sm text-[#42434d]">
                   Awarded by many Indian and International organisations
                 </p>
               </div>
@@ -46,7 +46,7 @@ const ServiceAuthor = () => {
 
             {/* Contact information with enhanced buttons */}
             <div className="pt-2 space-y-2">
-              <div className="flex flex-col sm:flex-row gap-2">
+              <div className="flex flex-col sm:flex-row gap-3">
                 <a
                   href="https://www.linkedin.com/in/dhruv-aggarwal-44b116155"
                   target="_blank"
@@ -56,22 +56,22 @@ const ServiceAuthor = () => {
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
+                      width="20"
+                      height="20"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="lucide lucide-linkedin w-4 h-4 text-[#0077B5]"
+                      className="lucide lucide-linkedin w-3.5 h-3.5 text-[#0077B5]"
                     >
                       <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                       <rect width="4" height="12" x="2" y="9"></rect>
                       <circle cx="4" cy="4" r="2"></circle>
                     </svg>
                   </span>
-                  <span className="font-inter text-sm md:text-lg text-[#42434d]">
+                  <span className="font-inter text-xs md:text-sm text-[#42434d]">
                     <span className="font-medium">LinkedIn:</span> Connect with
                     me
                   </span>
@@ -81,8 +81,8 @@ const ServiceAuthor = () => {
                   href="mailto:info@sunconsultants.co.in"
                   className="flex items-center gap-2 p-3 bg-gradient-to-r from-[#1A8781]/5 to-[#125E5A]/10 hover:from-[#1A8781]/10 hover:to-[#125E5A]/15 rounded-lg border border-[#1A8781]/10 hover:border-[#1A8781]/20 transition-all duration-200 cursor-pointer"
                 >
-                  <Mail className="w-4 h-4 text-[#1A8781]" />
-                  <span className="font-inter text-sm md:text-lg text-[#42434d]">
+                  <Mail className="w-3.5 h-3.5 text-[#1A8781]" />
+                  <span className="font-inter text-xs md:text-sm text-[#42434d]">
                     <span className="font-medium">Contact:</span>{" "}
                     info@sunconsultants.co.in
                   </span>
