@@ -26,7 +26,7 @@ const intro = (
       title="BIS Certification for Foreign Manufacturers"
     />
 
-    <SectionHeadingThree  >What is Indian BIS?</SectionHeadingThree>
+    <SectionHeadingThree as="h2">What is Indian BIS?</SectionHeadingThree>
 
     <ServiceParagraph>
       The Bureau of Indian Standards (BIS) is India's national standards body
@@ -74,7 +74,7 @@ const OverviewSection = () => {
         before being exported and sold in the Indian market.
       </ServiceParagraph>
 
-      <SectionHeadingThree>Key Features and Scopes</SectionHeadingThree>
+      <SectionHeadingThree as="h2">Key Features and Scopes</SectionHeadingThree>
 
       <ServiceList
         points={[
@@ -91,7 +91,7 @@ const OverviewSection = () => {
         20,000 items are eligible for a voluntary BIS certificate.
       </ServiceParagraph>
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="h2">
         Why BIS Certification is Crucial ?
       </SectionHeadingThree>
 
@@ -111,7 +111,7 @@ const OverviewSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="h2">
         Key Features of BIS certificate for foreign manufacturers
       </SectionHeadingThree>
 
@@ -162,7 +162,7 @@ const StandardizationSection = () => {
         guidelines.
       </ServiceParagraph>
 
-      <SectionHeadingThree as="h3">
+      <SectionHeadingThree>
         According to the BIS Act, 2016 :
       </SectionHeadingThree>
 
@@ -203,7 +203,7 @@ const StandardizationSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="h2">
         Indian BIS vs. Other Global Certifications
       </SectionHeadingThree>
 
@@ -388,7 +388,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingTwo>
+      <SectionHeadingTwo as="h3">
         Detailed Breakdown of Each document required to Indian BIS
         certification
       </SectionHeadingTwo>
@@ -544,7 +544,7 @@ const ProcessSection = () => {
         Sample copy of BIS FMCS certificate.
       </SectionHeadingThree>
 
-      <SectionHeadingTwo>Timeframe to Obtain BIS Certificate</SectionHeadingTwo>
+      <SectionHeadingTwo as="h3">Timeframe to Obtain BIS Certificate</SectionHeadingTwo>
 
       <SectionHeadingThree>
         Typical Duration from Application to Certificate
