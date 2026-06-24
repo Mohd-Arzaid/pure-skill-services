@@ -73,7 +73,7 @@ const hero = {
 const OverviewSection = () => {
   return (
     <div className="flex flex-col gap-5">
-      <SectionHeadingTwo>
+      <SectionHeadingTwo as="h1">
         BIS Certification in India | Complete Guide
       </SectionHeadingTwo>
 
@@ -83,7 +83,7 @@ const OverviewSection = () => {
         title="BIS Certificate for Indian manufactures"
       />
 
-      <SectionHeadingThree>What is BIS Certification?</SectionHeadingThree>
+      <SectionHeadingThree as="h2">What is BIS Certification?</SectionHeadingThree>
 
       <ServiceParagraph>
         BIS certification refers to the process of obtaining a quality standard
@@ -112,7 +112,7 @@ const OverviewSection = () => {
         goods in India without BIS recognition.
       </ServiceParagraph>
 
-      <SectionHeadingThree>Why BIS Certification Matters</SectionHeadingThree>
+      <SectionHeadingThree as="h2">Why BIS Certification Matters</SectionHeadingThree>
 
       <ServiceParagraph>
         Take for instance, a manufacturer from Germany who has invented a unique
@@ -138,7 +138,7 @@ const OverviewSection = () => {
         navigation available to both foreign and domestic manufacturers.
       </ServiceParagraph>
 
-      <SectionHeadingThree>A Brief History of BIS in India</SectionHeadingThree>
+      <SectionHeadingThree as="h2">A Brief History of BIS in India</SectionHeadingThree>
 
       <ServiceParagraph>
         The Bureau of Indian Standards (BIS) was formed in 1986 taking over the
@@ -148,7 +148,7 @@ const OverviewSection = () => {
         amendments for the Indian conditions.
       </ServiceParagraph>
 
-      <SectionHeadingThree>Remarkable Milestones</SectionHeadingThree>
+      <SectionHeadingThree as="div">Remarkable Milestones</SectionHeadingThree>
 
       <ServiceList
         points={[
@@ -165,7 +165,7 @@ const OverviewSection = () => {
         industries.
       </ServiceParagraph>
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="h2">
         Why is BIS Certification mandatory in India?
       </SectionHeadingThree>
 
@@ -785,55 +785,27 @@ const AIRSection = () => {
   return (
     <div className="flex flex-col gap-5">
       <SectionHeadingTwo>
-        BIS Certification Cost Structure Explained
+        Role of Authorized Indian Representative (AIR)
       </SectionHeadingTwo>
 
-      <SectionHeadingThree>
-        Overview of BIS Certification Costs
-      </SectionHeadingThree>
-
       <ServiceParagraph>
-        Securing a BIS certificate under the Foreign Manufacturers
-        Certification Scheme (FMCS) involves several types of costs. These cover
-        everything from application submission and audits to product testing
-        and mark usage.
+        For foreign manufacturers, the Authorized Indian Representative (AIR) is
+        critical.
       </ServiceParagraph>
 
-      <ServiceParagraph>
-        Foreign manufacturers must budget adequately to ensure timely payments,
-        as failure to pay can lead to rejection of BIS certification mid-way.
-      </ServiceParagraph>
-
-      <ServiceTable
-        className="mt-2"
-        headers={["COST CATEGORY", "DESCRIPTION"]}
-        rows={[
-          [
-            "Application Fee (INR 1000)",
-            "Paid during submission of the FMCS application form for obtaining Indian BIS",
-          ],
-          [
-            "Audit Charges (INR 7000)",
-            "Covers BIS auditor travel, man-day rates, and related expenses",
-          ],
-          [
-            "Product Testing Fees (As per product)",
-            "For testing sealed samples at BIS-recognized labs in India",
-          ],
-          [
-            "License Fee (INR 1000)",
-            "One-time fee paid upon grant of BIS certificate",
-          ],
-          [
-            "Marking Fee (As per product)",
-            "Annual fee for usage of the ISI mark on certified products",
-          ],
-          [
-            "Performance Bank Guarantee (USD 10,000)",
-            "Financial guarantee deposited via Indian bank to ensure compliance",
-          ],
+      <ServiceList
+        points={[
+          "Handles all communication with BIS.",
+          "Gathers and submits documents, then facilitates the inspection process.",
+          "Ensures compliance regarding certification, before, and after.",
+          "Must be an Indian citizen or an organization with a registered local address.",
         ]}
       />
+
+      <ServiceParagraph>
+        In the absence of an AIR, obtaining BIS certification for foreign
+        companies is impossible.
+      </ServiceParagraph>
     </div>
   );
 };
@@ -841,58 +813,25 @@ const AIRSection = () => {
 const ConclusionSection = () => {
   return (
     <div className="flex flex-col gap-5">
-      <SectionHeadingTwo>
-        Why Choose a BIS Certification Consultant?
-      </SectionHeadingTwo>
+      <SectionHeadingTwo>Conclusion</SectionHeadingTwo>
 
       <ServiceParagraph>
-        The BIS certification under the FMCS registration scheme is intricate,
-        highly technical, and time-sensitive. While it is possible to pursue
-        certification independently, most successful foreign manufacturers rely
-        on BIS consultants to streamline the journey and minimize risks.
+        Having a BIS certification is a necessity for doing business in India.
+        It is no longer an optional certification in business. It is crucial for
+        business success and building trust. BIS is essential for safety and
+        success in India. For manufacturers and importers, it offers an easy and
+        safe business setup environment. Legal issues and fines are no longer a
+        concern. With a BIS mark, consumer trust is guaranteed.
       </ServiceParagraph>
 
-      <SectionHeadingThree>What Does a BIS Consultant Do?</SectionHeadingThree>
-
       <ServiceParagraph>
-        A BIS certification consultant provides end-to-end guidance across every
-        step of the process. Their core responsibilities include:
-      </ServiceParagraph>
-
-      <ServiceTable
-        className="mt-2"
-        headers={["TASK", "DESCRIPTION"]}
-        rows={[
-          [
-            "Documentation",
-            "Prepares, reviews, and formats all required documents",
-          ],
-          [
-            "Application Support",
-            "Submits and tracks your BIS application",
-          ],
-          [
-            "Audit Preparation",
-            "Guides factory teams to ensure audit readiness",
-          ],
-          [
-            "Sample Coordination",
-            "Manages sealing and shipment of samples to India",
-          ],
-          [
-            "Testing Assistance",
-            "Liaises with labs and helps interpret results",
-          ],
-          [
-            "Renewal & Surveillance",
-            "Oversees license extensions and compliance checks",
-          ],
-        ]}
-      />
-
-      <ServiceParagraph>
-        They act as your strategic partner, often doubling as your Authorized
-        Indian Representative (AIR).
+        India is one of the biggest growing economies in the world and gaining
+        access to sell there can help an exporter grow. No matter if you are a
+        manufacturer in India or abroad, the BIS license is needed to
+        manufacture or sell products in the Indian market. It&apos;s required,
+        and it unlocks business prospects with India&apos;s growing population.
+        It&apos;s an investment in safety, consumer trust, brand reputation,
+        credibility, and long-term growth.
       </ServiceParagraph>
     </div>
   );
@@ -934,11 +873,7 @@ const sections = [
     label: "CONCLUSION",
     section: <ConclusionSection />,
   },
-  // {
-  //   id: "faqs",
-  //   label: "FAQS",
-  //   section: <FAQSection />,
-  // },
+
 ];
 
 const BISCertification = () => {
