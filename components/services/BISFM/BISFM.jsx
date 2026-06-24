@@ -26,7 +26,7 @@ const intro = (
       title="BIS Certification for Foreign Manufacturers"
     />
 
-    <SectionHeadingThree>What is Indian BIS?</SectionHeadingThree>
+    <SectionHeadingThree  >What is Indian BIS?</SectionHeadingThree>
 
     <ServiceParagraph>
       The Bureau of Indian Standards (BIS) is India's national standards body
@@ -499,19 +499,218 @@ const DocumentSection = () => {
 };
 
 const ProcessSection = () => {
-  return <div>ProcessSection</div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        Step-by-Step BIS Certification Process Under FMCS
+      </SectionHeadingTwo>
+
+      <SectionHeadingThree>
+        Overview of the BIS Certification Journey
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        The BIS certification process under the Foreign Manufacturers
+        Certification Scheme (FMCS) is methodical, structured, and multi-phased.
+        It ensures that products comply with applicable Indian standards,
+        manufacturing processes are robust, and testing is accurate.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Step-by-Step BIS license Process Summary Table
+      </SectionHeadingThree>
+
+      <ServiceTable
+        className="mt-2"
+        headers={["STEP", "DESCRIPTION"]}
+        rows={[
+          ["1", "Application Submission to BIS FMCD"],
+          ["2", "Documentation Scrutiny and Initial Review"],
+          ["3", "Query Resolution & Clarification Submission"],
+          ["4", "Nomination of BIS Technical Auditor"],
+          ["5", "Factory Audit Scheduling & Coordination via AIR"],
+          ["6", "Factory Inspection & Sample Sealing by BIS Auditor"],
+          ["7", "In-House Product Testing (if applicable)"],
+          [
+            "8",
+            "Testing of Sealed Samples in BIS-Approved Labs in India",
+          ],
+          ["9", "Review of Test Reports & Audit Findings"],
+          ["10", "Issuance of BIS License and Use of ISI Mark"],
+        ]}
+      />
+
+      <SectionHeadingThree>
+        Sample copy of BIS FMCS certificate.
+      </SectionHeadingThree>
+
+      <SectionHeadingTwo>Timeframe to Obtain BIS Certificate</SectionHeadingTwo>
+
+      <SectionHeadingThree>
+        Typical Duration from Application to Certificate
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        The BIS certification process under FMCS generally takes about 120
+        working days (approximately 3–4 months) from the date of correct
+        application submission. Delays often occur when documents are unclear
+        or if the factory isn&apos;t audit ready.
+      </ServiceParagraph>
+
+      <ServiceImage
+        src="/images/services/BISFM/biscertificate.png"
+        alt="Sample BIS FMCS certificate"
+        title="Sample BIS FMCS certificate"
+      />
+
+     
+
+ 
+    </div>
+  );
 };
 
 const CostingSection = () => {
-  return <div>CostingSection</div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        BIS Certification Cost Structure Explained
+      </SectionHeadingTwo>
+
+      <SectionHeadingThree>
+        Overview of BIS Certification Costs
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        Securing a BIS certificate under the Foreign Manufacturers
+        Certification Scheme (FMCS) involves several types of costs. These cover
+        everything from application submission and audits to product testing
+        and mark usage.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        Foreign manufacturers must budget adequately to ensure timely payments,
+        as failure to pay can lead to rejection of BIS certification mid-way.
+      </ServiceParagraph>
+
+      <ServiceTable
+        className="mt-2"
+        headers={["COST CATEGORY", "DESCRIPTION"]}
+        rows={[
+          [
+            "Application Fee (INR 1000)",
+            "Paid during submission of the FMCS application form for obtaining Indian BIS",
+          ],
+          [
+            "Audit Charges (INR 7000)",
+            "Covers BIS auditor travel, man-day rates, and related expenses",
+          ],
+          [
+            "Product Testing Fees (As per product)",
+            "For testing sealed samples at BIS-recognized labs in India",
+          ],
+          [
+            "License Fee (INR 1000)",
+            "One-time fee paid upon grant of BIS certificate",
+          ],
+          [
+            "Marking Fee (As per product)",
+            "Annual fee for usage of the ISI mark on certified products",
+          ],
+          [
+            "Performance Bank Guarantee (USD 10,000)",
+            "Financial guarantee deposited via Indian bank to ensure compliance",
+          ],
+        ]}
+      />
+    </div>
+  );
 };
 
 const SurveillanceSection = () => {
-  return <div>SurveillanceSection</div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        Post BIS Certification Surveillance and Compliance Requirements
+      </SectionHeadingTwo>
+
+      <ServiceParagraph>
+        Once a BIS certificate is granted, the responsibility doesn&apos;t end
+        there. The BIS certification includes an ongoing surveillance and
+        compliance system to ensure continuous adherence to Indian standards.
+        This post-certification phase is crucial to maintaining your BIS
+        license, retaining the right to use the ISI mark, and avoiding legal
+        penalties or suspensions.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        Key Surveillance Components after obtaining BIS certificate Market
+        Surveillance : Random product sampling from the Indian market for
+        independent lab testing , if the sample fails the BIS certificate is
+        suspended. It is done twice every year.
+      </ServiceParagraph>
+    </div>
+  );
 };
 
 const FacilitatorSection = () => {
-  return <div>FacilitatorSection</div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        Why Choose a BIS Certification Consultant?
+      </SectionHeadingTwo>
+
+      <ServiceParagraph>
+        The BIS certification under the FMCS registration scheme is intricate,
+        highly technical, and time-sensitive. While it is possible to pursue
+        certification independently, most successful foreign manufacturers rely
+        on BIS consultants to streamline the journey and minimize risks.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>What Does a BIS Consultant Do?</SectionHeadingThree>
+
+      <ServiceParagraph>
+        A BIS certification consultant provides end-to-end guidance across every
+        step of the process. Their core responsibilities include:
+      </ServiceParagraph>
+
+      <ServiceTable
+        className="mt-2"
+        headers={["TASK", "DESCRIPTION"]}
+        rows={[
+          [
+            "Documentation",
+            "Prepares, reviews, and formats all required documents",
+          ],
+          [
+            "Application Support",
+            "Submits and tracks your BIS application",
+          ],
+          [
+            "Audit Preparation",
+            "Guides factory teams to ensure audit readiness",
+          ],
+          [
+            "Sample Coordination",
+            "Manages sealing and shipment of samples to India",
+          ],
+          [
+            "Testing Assistance",
+            "Liaises with labs and helps interpret results",
+          ],
+          [
+            "Renewal & Surveillance",
+            "Oversees license extensions and compliance checks",
+          ],
+        ]}
+      />
+
+      <ServiceParagraph>
+        They act as your strategic partner, often doubling as your Authorized
+        Indian Representative (AIR).
+      </ServiceParagraph>
+    </div>
+  );
 };
 
 const sections = [
