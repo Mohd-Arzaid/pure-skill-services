@@ -24,7 +24,7 @@
             <div className="flex-1">
               <div className="flex flex-col gap-6 md:gap-9">
                 {intro}
-                <ServiceSeparator />
+                {intro && <ServiceSeparator />}
                 {sections.map((section, index) => (
                   <Fragment key={section.id}>
                     {index > 0 && <ServiceSeparator />}

@@ -7,8 +7,11 @@ import {
   TableHead,
 } from "@/components/ui/table";
 
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+
+// Service Left Side Content
 
 export const ServiceIndexHeading = ({ children, className }) => (
   <div className="flex w-full items-center gap-3 mb-3 md:mb-5">
@@ -162,4 +165,68 @@ export const ServiceTable = ({
       </TableBody>
     </Table>
   </div>
+);
+
+// Service Right Side Content
+
+export const ServiceRightSideCard = ({ children, className }) => (
+  <div
+    className={cn(
+      "w-full md:w-[360px] rounded-lg shadow-[0_1px_5px_-4px_rgba(19,19,22,0.7),0_4px_8px_rgba(32,42,54,0.05)] ring-1 ring-gray-900/[0.075] transition-shadow hover:shadow-[0_1px_7px_-4px_rgba(19,19,22,0.8),0_4px_11px_rgba(32,42,54,0.05)] hover:ring-gray-900/[0.125] font-inter",
+      className
+    )}
+  >
+    {children}
+  </div>
+);
+
+export const ServiceRightSideHeading = ({
+  icon: Icon,
+  children,
+  className,
+  iconClassName,
+  titleClassName,
+}) => (
+  <div className={cn("flex gap-2 items-center", className)}>
+    <Icon className={cn("text-neutral-800 size-5", iconClassName)} />
+    <div
+      className={cn(
+        "text-base font-medium text-neutral-800 font-inter",
+        titleClassName
+      )}
+    >
+      {children}
+    </div>
+  </div>
+);
+
+export const ServiceRightSideButton = ({
+  children,
+  className,
+  icon: Icon,
+  iconClassName,
+  type = "button",
+  ...props
+}) => (
+  <Button
+    type={type}
+    className={cn(
+      "w-full bg-neutral-800 text-white group relative overflow-hidden font-inter",
+      className
+    )}
+    {...props}
+  >
+    <span className="relative z-10 flex items-center font-inter">
+      {children}
+      {Icon && (
+        <Icon
+          className={cn(
+            "ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 font-inter",
+            iconClassName
+          )}
+        />
+      )}
+    </span>
+    <span className="absolute top-0 left-0 w-0 h-full bg-blue-600 transition-all duration-300 group-hover:w-full font-inter" />
+  </Button>
 );

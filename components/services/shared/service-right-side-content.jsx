@@ -1,10 +1,40 @@
-import { AlignLeft } from "lucide-react";
+"use client";
+
+import { Marquee } from "@/components/ui/marquee";
+import {
+  AlignLeft,
+  ArrowRightIcon,
+  Languages,
+  Phone,
+  User,
+  Mail,
+  PhoneCall,
+  SendHorizontal,
+  MessageCircle,
+  Shield,
+  Clock,
+  Award,
+  HeartHandshake,
+  Lightbulb,
+  BarChart,
+} from "lucide-react";
 import React from "react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import {
+  ServiceRightSideHeading,
+  ServiceRightSideButton,
+  ServiceRightSideCard,
+} from "./service-content";
+
 
 const ServiceRightSideContent = () => {
   return (
     <div className="flex flex-col gap-6 w-full md:w-[360px] font-inter">
       <BIS_QCO_Updates />
+      <Client_Testimonials />
+      <Why_Choose_Us />
+      <Contact_form />
     </div>
   );
 };
@@ -143,13 +173,439 @@ const BIS_QCO_Updates = () => {
     },
   ];
   return (
-    <div className="w-full md:w-[360px] p-6 rounded-lg bg-gray-50 shadow-[0_1px_5px_-4px_rgba(19,19,22,0.7),0_4px_8px_rgba(32,42,54,0.05)] ring-1 ring-gray-900/[0.075] transition-shadow hover:shadow-[0_1px_7px_-4px_rgba(19,19,22,0.8),0_4px_11px_rgba(32,42,54,0.05)] hover:ring-gray-900/[0.125] font-inter">
-      <div className="flex gap-2 items-center">
-        <AlignLeft className="text-[#232327]" />
-        <div className="text-xl font-semibold text-[#232327] font-inter">
-          BIS QCO Updates
+    <ServiceRightSideCard className="p-6 bg-gray-50">
+      <ServiceRightSideHeading icon={AlignLeft}>
+        BIS QCO Updates
+      </ServiceRightSideHeading>
+
+      <div className="relative h-[400px] overflow-hidden mt-5">
+        <Marquee vertical pauseOnHover={true} className="[--duration:20s]">
+          {blogPosts.map((post, index) => (
+            <div key={index} className="mb-5 font-inter">
+              <div className="group flex gap-4 transition-all duration-300 h-20 font-inter">
+                <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-md">
+                  <img
+                    src={post.image}
+                    alt={post.alt || post.title}
+                    title={post.alt || post.title}
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="flex-1 flex flex-col justify-between h-20 py-1 font-inter">
+                  <div className="flex-1 font-inter">
+                    <p className="line-clamp-2 text-sm  text-neutral-800 font-inter">
+                      {post.title}
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0 font-inter">
+                    <Link href={post.url} passHref>
+                      <Button
+                        variant="link"
+                        className="text-blue-900 hover:text-blue-950 p-0 h-auto text-sm font-inter"
+                      >
+                        Read More
+                        <ArrowRightIcon className="ml-1 h-3 w-3 font-inter" />
+                      </Button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {index < blogPosts.length - 1 && (
+                <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-border to-transparent font-inter" />
+              )}
+            </div>
+          ))}
+        </Marquee>
+      </div>
+
+      <div className="mt-5 w-full flex justify-center font-inter">
+        <Link href="/bis-qco-updates" className="w-full" passHref>
+          <ServiceRightSideButton icon={ArrowRightIcon}>
+            View All Updates
+          </ServiceRightSideButton>
+        </Link>
+      </div>
+    </ServiceRightSideCard>
+  );
+};
+
+const Client_Testimonials = () => {
+  const testimonials = [
+    {
+      name: "Ms.Eliyawati",
+      role: "PT Quty Karunia, BIS Licensee in Vietnam",
+      content:
+        "Sun Certifications India provided excellent BIS Certification services. Their unparalleled service and sincerity gained our trust. One of the best BIS consultants in India!",
+    },
+    {
+      name: "Ms.Belle",
+      role: "Thantawan Industries Ltd, BIS Licensee in Thailand",
+      content:
+        "Sun Certifications India supported us throughout the BIS certification process. Their responsive customer service and punctuality are exceptional. Highly recommend for hassle-free BIS certification.",
+    },
+    {
+      name: "Ms.Jun Min Sim",
+      role: "Leaderart Industries, BIS Licensee in Malaysia",
+      content:
+        "Sun Certifications India helped us acquire BIS Certification, doubling our engagement in India. Their services are fast, genuine, and up-to-date with latest BIS norms.",
+    },
+    {
+      name: "Ms. Fatima",
+      role: "Aluminium Bahrain (ALBA), BIS Licensee in Bahrain",
+      content:
+        "Excellent BIS certification support, highly reliable consultants.",
+    },
+    {
+      name: "Mr. Yousef",
+      role: "Bahrain Aluminium Manufacturing Company, BIS Licensee in Bahrain",
+      content: "Smooth BIS registration process with expert consultants.",
+    },
+    {
+      name: "Mr. Satoshi",
+      role: "Daiki Aluminium Japan, BIS Licensee in Japan",
+      content: "Efficient BIS license assistance, great consultants.",
+    },
+    {
+      name: "Ms. Amanda",
+      role: "Honeywell, BIS Licensee in USA",
+      content: "Professional BIS certificate guidance, very satisfied.",
+    },
+    {
+      name: "Ms. Amanda",
+      role: "Trimble Navigation, BIS Licensee in USA",
+      content: "Seamless BIS certification and registration support.",
+    },
+    {
+      name: "Ms. Martina",
+      role: "Remsa Italia, BIS Licensee in Italy",
+      content: "Helpful BIS consultants, simplified license process.",
+    },
+    {
+      name: "Ms. Nikola",
+      role: "Aquazzura, BIS Licensee in Italy",
+      content:
+        "We got our BIS certificate well within the timelines and at affordable prices, great work team Sun!",
+    },
+    {
+      name: "Ms. Ayu",
+      role: "PT Quty, BIS Licensee in Indonesia",
+      content: "Excellent BIS registration service, highly recommended.",
+    },
+    {
+      name: "Mr. Huy",
+      role: "Danu Vina, BIS Licensee in Vietnam",
+      content: "Reliable BIS license consultants, fast process.",
+    },
+    {
+      name: "Mr. Minh",
+      role: "Hanh My Production Company, BIS Licensee in Vietnam",
+      content: "Expert BIS consultants, certification made easy.",
+    },
+    {
+      name: "Ms. Hoa",
+      role: "Sedo Vina, BIS Licensee in Vietnam",
+      content: "Smooth BIS certificate registration, great support.",
+    },
+    {
+      name: "Ms. Hana",
+      role: "Misumi Japan, BIS Licensee in Japan",
+      content: "Trusted BIS consultants, quick certification process.",
+    },
+    {
+      name: "Ms. Nok",
+      role: "Thantawan Public Industry Company, BIS Licensee in Thailand",
+      content: "Professional BIS certification service, very efficient.",
+    },
+    {
+      name: "Mr. Luis",
+      role: "Cortizo Aluminios, BIS Licensee in Spain",
+      content: "Excellent BIS registration and license guidance.",
+    },
+    {
+      name: "Ms. Aisha",
+      role: "Midal Cables, BIS Licensee in Bahrain",
+      content: "Expert BIS consultants, smooth certification process.",
+    },
+    {
+      name: "Ms. Aisha",
+      role: "Nobilia Kitchens, BIS Licensee in Bahrain",
+      content: "Reliable BIS certificate registration support.",
+    },
+  ];
+
+  return (
+    <ServiceRightSideCard className="overflow-hidden bg-gray-50">
+      <div className="pt-6 px-6 pb-4 font-inter">
+        <ServiceRightSideHeading icon={Languages}>
+          Client Testimonials
+        </ServiceRightSideHeading>
+        <div className="mt-8 mb-5 rounded-lg h-[450px] overflow-hidden font-inter">
+          <Marquee
+            vertical
+            repeat={2}
+            pauseOnHover={true}
+            className="[--duration:60s]"
+          >
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="group mb-6 font-inter">
+                <div className="bg-white p-4 rounded-lg border border-gray-300 shadow-sm hover:shadow-md transition-shadow duration-200 font-inter">
+                  <div className="mb-3 font-inter">
+                    <div className="font-bold text-neutral-800 text-base font-inter">
+                      {testimonial.name}
+                    </div>
+                    <p className="text-sm text-neutral-600 mt-1 font-inter">
+                      {testimonial.role}
+                    </p>
+                  </div>
+                  <p className="italic text-neutral-700 text-sm leading-relaxed font-medium font-inter">
+                    &ldquo;{testimonial.content}&rdquo;
+                  </p>
+                </div>
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
-    </div>
+    </ServiceRightSideCard>
+  );
+};
+
+const Why_Choose_Us = () => {
+  const stats = {
+    experience: { value: "10+", label: "Years Exp." },
+    clients: { value: "1599+", label: "Our Clients" },
+    successRate: { value: "100%", label: "Success Rate" },
+    countries: { value: "20+", label: "Countries Served" },
+  };
+
+  const reasons = [
+    {
+      title: "Expert Guidance",
+      description:
+        "Our team brings 10e4+ years of experience in CDSCO and BIS compliance.",
+    },
+    {
+      title: "Time Efficient",
+      description:
+        "We reduce approval time by up to 40% with streamlined processes.",
+    },
+    {
+      title: "Proven Success",
+      description: "100% success rate with 1500+ successful registrations.",
+    },
+    {
+      title: "Client-Centric",
+      description: "Dedicated account manager ensuring personalized service.",
+    },
+  ];
+
+  const performance = {
+    title: "Our Performance",
+    metrics: {
+      speed: { label: "Speed", value: "95" },
+      success: { label: "Success", value: "99" },
+      satisfaction: { label: "Satisfaction", value: "98" },
+    },
+  };
+
+  const reasonIcons = {
+    0: <Shield className="h-8 w-8 text-blue-600" />,
+    1: <Clock className="h-8 w-8 text-emerald-600" />,
+    2: <Award className="h-8 w-8 text-amber-600" />,
+    3: <HeartHandshake className="h-8 w-8 text-purple-600" />,
+  };
+
+  return (
+    <ServiceRightSideCard className="p-5 bg-gradient-to-br from-slate-50 to-gray-50">
+      <ServiceRightSideHeading icon={Lightbulb}>
+        Why Choose Us
+      </ServiceRightSideHeading>
+
+      <div className="mt-4 grid grid-cols-2 gap-2 font-inter">
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-blue-200 font-inter">
+          <div className="text-2xl font-bold text-blue-600 font-inter">
+            {stats.experience.value}
+          </div>
+          <p className="text-xs text-gray-600 font-inter">
+            {stats.experience.label}
+          </p>
+        </div>
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-emerald-200 font-inter">
+          <div className="text-2xl font-bold text-emerald-600 font-inter">
+            {stats.clients.value}
+          </div>
+          <p className="text-xs text-gray-600 font-inter">
+            {stats.clients.label}
+          </p>
+        </div>
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-amber-200 font-inter">
+          <div className="text-2xl font-bold text-amber-600 font-inter">
+            {stats.successRate.value}
+          </div>
+          <p className="text-xs text-gray-600 font-inter">
+            {stats.successRate.label}
+          </p>
+        </div>
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-purple-200 font-inter">
+          <div className="text-2xl font-bold text-purple-600 font-inter">
+            {stats.countries.value}
+          </div>
+          <p className="text-xs text-gray-600 font-inter">
+            {stats.countries.label}
+          </p>
+        </div>
+      </div>
+
+      <div className="mt-4 space-y-3 font-inter">
+        {reasons.map((reason, index) => (
+          <div
+            key={index}
+            className="group bg-white rounded-lg p-3 border border-gray-200 hover:border-blue-200 font-inter"
+          >
+            <div className="flex gap-3 items-start font-inter">
+              <div className="p-1.5 bg-gray-50 rounded-lg group-hover:bg-blue-50 font-inter">
+                {reasonIcons[index]}
+              </div>
+              <div className="font-inter">
+                <div className="font-semibold text-gray-900 text-sm font-inter">
+                  {reason.title}
+                </div>
+                <p className="text-xs text-gray-600 font-inter">
+                  {reason.description}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="mt-4 bg-blue-50 rounded-lg p-3 border border-blue-100 font-inter">
+        <div className="flex items-center gap-1 mb-2 font-inter">
+          <BarChart className="h-4 w-4 text-blue-600" />
+          <span className="text-sm font-medium text-gray-900 font-inter">
+            {performance.title}
+          </span>
+        </div>
+        <div className="grid grid-cols-3 gap-2 font-inter">
+          <div className="text-center font-inter">
+            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1 font-inter">
+              <div
+                className="h-full bg-blue-600 rounded-full font-inter"
+                style={{ width: `${performance.metrics.speed.value}%` }}
+              ></div>
+            </div>
+            <span className="text-xs text-gray-600 font-inter">
+              {performance.metrics.speed.label}
+            </span>
+          </div>
+          <div className="text-center font-inter">
+            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1 font-inter">
+              <div
+                className="h-full bg-emerald-600 rounded-full font-inter"
+                style={{ width: `${performance.metrics.success.value}%` }}
+              ></div>
+            </div>
+            <span className="text-xs text-gray-600 font-inter">
+              {performance.metrics.success.label}
+            </span>
+          </div>
+          <div className="text-center font-inter">
+            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1 font-inter">
+              <div
+                className="h-full bg-amber-600 rounded-full font-inter"
+                style={{
+                  width: `${performance.metrics.satisfaction.value}%`,
+                }}
+              ></div>
+            </div>
+            <span className="text-xs text-gray-600 font-inter">
+              {performance.metrics.satisfaction.label}
+            </span>
+          </div>
+        </div>
+      </div>
+    </ServiceRightSideCard>
+  );
+};
+
+const Contact_form = () => {
+  return (
+    <ServiceRightSideCard className="md:sticky md:top-[128px] md:self-start p-6 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <ServiceRightSideHeading icon={PhoneCall}>
+        Request a Free Callback
+      </ServiceRightSideHeading>
+
+      <p className="mt-3 text-sm text-gray-600 font-inter">
+        Leave your details below and our experts will call you back within 24
+        hours to discuss your regulatory compliance needs.
+      </p>
+
+      <form className="mt-5 space-y-4 font-inter">
+        <div className="relative font-inter">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none font-inter">
+            <User className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="text"
+            name="fullName"
+            required
+            placeholder="Your Name*"
+            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+          />
+        </div>
+
+        <div className="relative font-inter">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none font-inter">
+            <Phone className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="tel"
+            name="phoneNumber"
+            required
+            placeholder="Phone Number*"
+            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+          />
+        </div>
+
+        <div className="relative font-inter">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none font-inter">
+            <Mail className="h-5 w-5 text-gray-400" />
+          </div>
+          <input
+            type="email"
+            name="email"
+            required
+            placeholder="Email Address*"
+            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+          />
+        </div>
+
+        <div className="relative font-inter">
+          <div className="absolute top-3 left-3 pointer-events-none font-inter">
+            <MessageCircle className="h-5 w-5 text-gray-400" />
+          </div>
+          <textarea
+            name="message"
+            required
+            placeholder="Required Certification*"
+            rows="3"
+            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+          ></textarea>
+        </div>
+
+        <ServiceRightSideButton type="submit" className="mt-5" icon={SendHorizontal}>
+          Request Callback
+        </ServiceRightSideButton>
+      </form>
+
+      <p className="mt-3 text-xs text-center text-gray-500 font-inter">
+        By submitting this form, you agree to our{" "}
+        <Link href="/privacy-policy" className="text-blue-600 hover:underline font-inter">
+          Privacy Policy
+        </Link>{" "}
+        and consent to being contacted.
+      </p>
+    </ServiceRightSideCard>
   );
 };
