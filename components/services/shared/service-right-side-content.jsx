@@ -181,8 +181,8 @@ const BIS_QCO_Updates = () => {
       <div className="relative h-[400px] overflow-hidden mt-5">
         <Marquee vertical pauseOnHover={true} className="[--duration:20s]">
           {blogPosts.map((post, index) => (
-            <div key={index} className="mb-5 font-inter">
-              <div className="group flex gap-4 transition-all duration-300 h-20 font-inter">
+            <div key={index} className="mb-5">
+              <div className="group flex gap-4 transition-all duration-300 h-20">
                 <div className="h-20 w-20 flex-shrink-0 overflow-hidden rounded-md">
                   <img
                     src={post.image}
@@ -192,34 +192,34 @@ const BIS_QCO_Updates = () => {
                   />
                 </div>
 
-                <div className="flex-1 flex flex-col justify-between h-20 py-1 font-inter">
-                  <div className="flex-1 font-inter">
-                    <p className="line-clamp-2 text-[13px] leading-[17px] text-neutral-800 font-inter">
+                <div className="flex-1 flex flex-col justify-between h-20 py-1">
+                  <div className="flex-1">
+                    <p className="line-clamp-2 text-[13px] leading-[17px] text-neutral-800">
                       {post.title}
                     </p>
                   </div>
-                  <div className="flex-shrink-0 font-inter">
+                  <div className="flex-shrink-0">
                     <Link href={post.url} passHref>
                       <Button
                         variant="link"
-                        className="text-blue-900 hover:text-blue-950 p-0 h-auto text-[13px] leading-[17px] font-inter"
+                        className="text-blue-900 hover:text-blue-950 p-0 h-auto text-[13px] leading-[17px]"
                       >
                         Read More
-                        <ArrowRightIcon className="ml-1 h-3 w-3 font-inter" />
+                        <ArrowRightIcon className="ml-1 h-3 w-3" />
                       </Button>
                     </Link>
                   </div>
                 </div>
               </div>
               {index < blogPosts.length - 1 && (
-                <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-border to-transparent font-inter" />
+                <div className="mt-5 h-px w-full bg-gradient-to-r from-transparent via-border to-transparent" />
               )}
             </div>
           ))}
         </Marquee>
       </div>
 
-      <div className="mt-5 w-full flex justify-center font-inter">
+      <div className="mt-5 w-full flex justify-center">
         <Link href="/bis-qco-updates" className="w-full" passHref>
           <ServiceRightSideButton icon={ArrowRightIcon}>
             View All Updates
@@ -336,11 +336,11 @@ const Client_Testimonials = () => {
 
   return (
     <ServiceRightSideCard className="overflow-hidden bg-gray-50">
-      <div className="pt-6 px-6 pb-4 font-inter">
+      <div className="pt-6 px-6 pb-4">
         <ServiceRightSideHeading icon={Languages}>
           Client Testimonials
         </ServiceRightSideHeading>
-        <div className="mt-8 mb-5 rounded-lg h-[450px] overflow-hidden font-inter">
+        <div className="mt-8 mb-5 rounded-lg h-[450px] overflow-hidden">
           <Marquee
             vertical
             repeat={2}
@@ -350,15 +350,15 @@ const Client_Testimonials = () => {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="group mb-3">
                 <div className="bg-white p-4 rounded-lg border border-neutral-300 shadow-sm hover:shadow-md transition-shadow duration-200">
-                  <div className="mb-4 font-inter">
-                    <div className="font-semibold text-neutral-800 text-base font-inter">
+                  <div className="mb-4">
+                    <div className="font-semibold text-neutral-800 text-base">
                       {testimonial.name}
                     </div>
-                    <p className="text-[13px] leading-[17px] text-neutral-600 mt-1 font-inter">
+                    <p className="text-[13px] leading-[17px] text-neutral-600 mt-1">
                       {testimonial.role}
                     </p>
                   </div>
-                  <p className="italic text-neutral-800 text-sm  font-inter">
+                  <p className="italic text-neutral-800 text-sm ">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
                 </div>
@@ -422,56 +422,56 @@ const Why_Choose_Us = () => {
         Why Choose Us
       </ServiceRightSideHeading>
 
-      <div className="mt-4 grid grid-cols-2 gap-2 font-inter">
-        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-blue-200 font-inter">
-          <div className="text-2xl font-bold text-blue-600 font-inter">
+      <div className="mt-4 grid grid-cols-2 gap-2">
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-blue-200">
+          <div className="text-2xl font-bold text-blue-600">
             {stats.experience.value}
           </div>
-          <p className="text-xs text-gray-600 font-inter">
+          <p className="text-xs text-gray-600">
             {stats.experience.label}
           </p>
         </div>
-        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-emerald-200 font-inter">
-          <div className="text-2xl font-bold text-emerald-600 font-inter">
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-emerald-200">
+          <div className="text-2xl font-bold text-emerald-600">
             {stats.clients.value}
           </div>
-          <p className="text-xs text-gray-600 font-inter">
+          <p className="text-xs text-gray-600">
             {stats.clients.label}
           </p>
         </div>
-        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-amber-200 font-inter">
-          <div className="text-2xl font-bold text-amber-600 font-inter">
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-amber-200">
+          <div className="text-2xl font-bold text-amber-600">
             {stats.successRate.value}
           </div>
-          <p className="text-xs text-gray-600 font-inter">
+          <p className="text-xs text-gray-600">
             {stats.successRate.label}
           </p>
         </div>
-        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-purple-200 font-inter">
-          <div className="text-2xl font-bold text-purple-600 font-inter">
+        <div className="bg-white p-2 rounded-lg border border-gray-200 text-center hover:border-purple-200">
+          <div className="text-2xl font-bold text-purple-600">
             {stats.countries.value}
           </div>
-          <p className="text-xs text-gray-600 font-inter">
+          <p className="text-xs text-gray-600">
             {stats.countries.label}
           </p>
         </div>
       </div>
 
-      <div className="mt-4 space-y-3 font-inter">
+      <div className="mt-4 space-y-3">
         {reasons.map((reason, index) => (
           <div
             key={index}
-            className="group bg-white rounded-lg p-3 border border-gray-200 hover:border-blue-200 font-inter"
+            className="group bg-white rounded-lg p-3 border border-gray-200 hover:border-blue-200"
           >
-            <div className="flex gap-3 items-start font-inter">
-              <div className="p-1.5 bg-gray-50 rounded-lg group-hover:bg-blue-50 font-inter">
+            <div className="flex gap-3 items-start">
+              <div className="p-1.5 bg-gray-50 rounded-lg group-hover:bg-blue-50">
                 {reasonIcons[index]}
               </div>
-              <div className="font-inter">
-                <div className="font-semibold text-gray-900 text-sm font-inter">
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">
                   {reason.title}
                 </div>
-                <p className="text-xs text-gray-600 font-inter">
+                <p className="text-xs text-gray-600">
                   {reason.description}
                 </p>
               </div>
@@ -480,46 +480,46 @@ const Why_Choose_Us = () => {
         ))}
       </div>
 
-      <div className="mt-4 bg-blue-50 rounded-lg p-3 border border-blue-100 font-inter">
-        <div className="flex items-center gap-1 mb-2 font-inter">
+      <div className="mt-4 bg-blue-50 rounded-lg p-3 border border-blue-100">
+        <div className="flex items-center gap-1 mb-2">
           <BarChart className="h-4 w-4 text-blue-600" />
-          <span className="text-sm font-medium text-gray-900 font-inter">
+          <span className="text-sm font-medium text-gray-900">
             {performance.title}
           </span>
         </div>
-        <div className="grid grid-cols-3 gap-2 font-inter">
-          <div className="text-center font-inter">
-            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1 font-inter">
+        <div className="grid grid-cols-3 gap-2">
+          <div className="text-center">
+            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1">
               <div
-                className="h-full bg-blue-600 rounded-full font-inter"
+                className="h-full bg-blue-600 rounded-full"
                 style={{ width: `${performance.metrics.speed.value}%` }}
               ></div>
             </div>
-            <span className="text-xs text-gray-600 font-inter">
+            <span className="text-xs text-gray-600">
               {performance.metrics.speed.label}
             </span>
           </div>
-          <div className="text-center font-inter">
-            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1 font-inter">
+          <div className="text-center">
+            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1">
               <div
-                className="h-full bg-emerald-600 rounded-full font-inter"
+                className="h-full bg-emerald-600 rounded-full"
                 style={{ width: `${performance.metrics.success.value}%` }}
               ></div>
             </div>
-            <span className="text-xs text-gray-600 font-inter">
+            <span className="text-xs text-gray-600">
               {performance.metrics.success.label}
             </span>
           </div>
-          <div className="text-center font-inter">
-            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1 font-inter">
+          <div className="text-center">
+            <div className="h-1.5 w-full bg-gray-100 rounded-full mb-1">
               <div
-                className="h-full bg-amber-600 rounded-full font-inter"
+                className="h-full bg-amber-600 rounded-full"
                 style={{
                   width: `${performance.metrics.satisfaction.value}%`,
                 }}
               ></div>
             </div>
-            <span className="text-xs text-gray-600 font-inter">
+            <span className="text-xs text-gray-600">
               {performance.metrics.satisfaction.label}
             </span>
           </div>
@@ -536,14 +536,14 @@ const Contact_form = () => {
         Request a Free Callback
       </ServiceRightSideHeading>
 
-      <p className="mt-3 text-sm text-gray-600 font-inter">
+      <p className="mt-3 text-sm text-gray-600">
         Leave your details below and our experts will call you back within 24
         hours to discuss your regulatory compliance needs.
       </p>
 
-      <form className="mt-5 space-y-4 font-inter">
-        <div className="relative font-inter">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none font-inter">
+      <form className="mt-5 space-y-4">
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
             <User className="h-4 w-4 text-gray-400" />
           </div>
           <input
@@ -551,12 +551,12 @@ const Contact_form = () => {
             name="fullName"
             required
             placeholder="Your Name*"
-            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
           />
         </div>
 
-        <div className="relative font-inter">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none font-inter">
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
             <Phone className="h-4 w-4 text-gray-400" />
           </div>
           <input
@@ -564,12 +564,12 @@ const Contact_form = () => {
             name="phoneNumber"
             required
             placeholder="Phone Number*"
-            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
           />
         </div>
 
-        <div className="relative font-inter">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none font-inter">
+        <div className="relative">
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none">
             <Mail className="h-4 w-4 text-gray-400" />
           </div>
           <input
@@ -577,12 +577,12 @@ const Contact_form = () => {
             name="email"
             required
             placeholder="Email Address*"
-            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
           />
         </div>
 
-        <div className="relative font-inter">
-          <div className="absolute top-3 left-3 pointer-events-none font-inter">
+        <div className="relative">
+          <div className="absolute top-3 left-3 pointer-events-none">
             <MessageCircle className="h-4 w-4 text-gray-400" />
           </div>
           <textarea
@@ -590,7 +590,7 @@ const Contact_form = () => {
             required
             placeholder="Required Certification*"
             rows="3"
-            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all"
           ></textarea>
         </div>
 
@@ -599,9 +599,9 @@ const Contact_form = () => {
         </ServiceRightSideButton>
       </form>
 
-      <p className="mt-3 text-xs text-center text-gray-500 font-inter">
+      <p className="mt-3 text-xs text-center text-gray-500">
         By submitting this form, you agree to our{" "}
-        <Link href="/privacy-policy" className="text-blue-600 hover:underline font-inter">
+        <Link href="/privacy-policy" className="text-blue-600 hover:underline">
           Privacy Policy
         </Link>{" "}
         and consent to being contacted.
