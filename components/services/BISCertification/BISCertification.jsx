@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { Check } from "lucide-react";
 import {
   SectionHeadingThree,
   SectionHeadingTwo,
@@ -7,6 +9,17 @@ import {
   ServiceTable,
 } from "../shared/service-content";
 import ServicePageLayout from "../shared/service-page-layout";
+
+const FMCS_PAGE =
+  "/a-guide-to-bis-certification-for-foreign-manufacturers-indian-bis";
+
+const schemeLinkClass = "text-[#1A8781] hover:underline font-medium";
+
+const SchemeCallout = ({ children }) => (
+  <div className="border-l-4 border-[#1A8781] bg-[#B9DEEB]/30 px-4 py-3 rounded-r-lg">
+    <p className="font-inter text-sm md:text-base text-neutral-600">{children}</p>
+  </div>
+);
 
 const hero = {
   heading: "BIS Certification India for Importers and Manufacturers",
@@ -185,269 +198,382 @@ const OverviewSection = () => {
 };
 
 const SchemesSection = () => {
+  const schemeIndexItems = [
+    {
+      content: (
+        <Link href={FMCS_PAGE} className={schemeLinkClass}>
+          FMCS – Foreign Manufacturers Certification Scheme
+        </Link>
+      ),
+    },
+    {
+      content: (
+        <Link href="#" className={schemeLinkClass}>
+          ISI Mark Scheme (Domestic Manufacturers)
+        </Link>
+      ),
+    },
+    {
+      content: (
+        <Link href="#" className={schemeLinkClass}>
+          Scheme X under Indian BIS
+        </Link>
+      ),
+    },
+    {
+      content: (
+        <Link href="#" className={schemeLinkClass}>
+          CRS – Compulsory Registration Scheme
+        </Link>
+      ),
+    },
+    { content: "Hallmarking Scheme (Jewellery & Precious Metals)" },
+    { content: "Eco Mark Certification" },
+    { content: "Management Systems Certification Scheme (MSCS)" },
+    { content: "LRS (Lab Recognition Scheme)" },
+  ];
+
   return (
     <div className="flex flex-col gap-5">
-     
-    </div>
-  );
-};
+      <SectionHeadingTwo>BIS Certification Schemes</SectionHeadingTwo>
 
-const RepresentationSection = () => {
-  return (
-    <div className="flex flex-col gap-5">
-      <SectionHeadingTwo>
-        Role of Authorized Indian Representative (AIR) in BIS Certification
-      </SectionHeadingTwo>
+      <ServiceParagraph>
+        BIS has numerous certification schemes designed for varied industries and
+        product types. Each is designed to address the particular needs of the
+        industry and the product.
+      </ServiceParagraph>
+
+      <ul className="flex flex-col gap-5">
+        {schemeIndexItems.map((item, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <div className="bg-neutral-100 p-1.5 rounded-full flex-shrink-0 flex items-center justify-center min-w-6 min-h-6 mt-0.5">
+              <Check size={12} className="text-neutral-800" />
+            </div>
+            <p className="font-inter text-sm md:text-base text-neutral-600 text-left max-w-full flex-1">
+              {item.content}
+            </p>
+          </li>
+        ))}
+      </ul>
 
       <SectionHeadingThree>
-        What is an Authorized Indian Representative (AIR)?
+        ISI Mark Scheme (Domestic Manufacturers)
       </SectionHeadingThree>
 
       <ServiceParagraph>
-        An Authorized Indian Representative (AIR) is a crucial intermediary
-        appointed by a foreign manufacturer seeking BIS certification under the
-        FMCS registration scheme. The AIR serves as the official liaison between
-        the Bureau of Indian Standards (BIS) and the manufacturer, ensuring
-        smooth communication, documentation handling, and coordination of the
-        certification process.
+        A BIS license is a prerequisite for Indian manufacturers to ensure legal
+        sales. The Bureau of Indian Standards (BIS) issues this to certify
+        quality, safety, and performance. The process includes factory audits,
+        product testing, and compliance checks. Once passed, manufacturers can use
+        the ISI mark.
       </ServiceParagraph>
 
+      <ServiceParagraph>
+        Obtaining a certificate is essential for market access across industries
+        like electronics, steel, cement, and plastic. It notes benefits like
+        participating in government contracts and warns of repercussions for
+        non-compliance, such as legal fines, product recalls, or sales bans.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        The ISI mark is the most prestigious. It requires testing at
+        BIS-recognized facilities and site inspections. Supplying products like
+        cement, LPG cylinders, electrical cables, and packaged drinking water
+        without the ISI mark is an offense.
+      </ServiceParagraph>
+
+      <SchemeCallout>
+        Get complete details about BIS certification for Indian manufacturers,
+        Click:{" "}
+        <Link href="#" className={schemeLinkClass}>
+          ISI Mark Certification Scheme
+        </Link>
+      </SchemeCallout>
+
       <SectionHeadingThree>
-        Legal Requirement for AIR Appointment
+        FMCS – Foreign Manufacturers Certification Scheme
       </SectionHeadingThree>
 
       <ServiceParagraph>
-        As per BIS guidelines, any foreign manufacturer who does not have a
-        registered office in India must appoint an AIR. This requirement ensures
-        that BIS has a reliable, accessible point of contact within Indian
-        jurisdiction.
+        FMCS is a scheme for foreign companies wishing to enter the Indian
+        market. It guarantees safety, quality, and performance assurance for
+        products manufactured abroad according to Indian standards. Foreign
+        companies must acquire a BIS certificate or license to use the ISI mark,
+        which involves factory evaluation and rigorous product sample testing.
       </ServiceParagraph>
-
-      <SectionHeadingThree>Key Responsibilities of the AIR</SectionHeadingThree>
 
       <ServiceParagraph>
-        The AIR&apos;s role spans the entire BIS certification process, from
-        documentation and application submission to audit coordination and
-        post-certification compliance:
+        A foreign manufacturer is required to appoint an Authorized Indian
+        Representative (AIR), who is responsible for communication and
+        coordination, as the first point of contact with the Bureau of Indian
+        Standards (BIS) for the scheme. It includes the filing of an
+        application, in depth compliance evaluation, and the assumption of all
+        necessary obligations to achieve compliance within the deadlines. As a
+        result of following the FMCS guidelines, foreign companies are able to
+        enter the Indian market, as well as acquire goodwill with the customers.
+        Any product with an ISI mark shows a high level of quality, safety, and
+        reliability assurance in India.
       </ServiceParagraph>
 
-      <ServiceTable
-        className="mt-2"
-        headers={["RESPONSIBILITY", "DESCRIPTION"]}
-        rows={[
-          [
-            "Communication",
-            "Acts as the point of contact with BIS officers and departments",
-          ],
-          [
-            "Application Support",
-            "Assists in filling forms, compiling documents, and submitting the application",
-          ],
-          [
-            "Audit Coordination",
-            "Coordinates factory inspection schedules and addresses auditor queries",
-          ],
-          [
-            "Compliance Monitoring",
-            "Ensures all testing and certification activities meet BIS norms",
-          ],
-          [
-            "Renewal Management",
-            "Oversees BIS licence renewal, documentation updates, and fee payments",
-          ],
-        ]}
-      />
+      <ServiceParagraph>
+        No foreign products which fall under the regulated categories are allowed
+        to enter India without the FMCS certification.
+      </ServiceParagraph>
+
+      <SchemeCallout>
+        Get complete details about BIS certification for foreign manufacturers,
+        Click:{" "}
+        <Link href={FMCS_PAGE} className={schemeLinkClass}>
+          FMCS – Foreign Manufacturers Certification Scheme
+        </Link>
+      </SchemeCallout>
 
       <SectionHeadingThree>
-        Eligibility Criteria to Become an AIR
+        Scheme X (Omnibus Technical Regulation)
       </SectionHeadingThree>
 
       <ServiceParagraph>
-        To serve as an AIR, an individual or organization must :
+        Scheme X, or the Omnibus Technical Regulation, is another BIS
+        certification Scheme designed by the Bureau of Indian Standards to help
+        simplify the compliance procedures of industries in mechanical and
+        electrical domains. Unlike the other certification schemes, Scheme X
+        focuses on reducing documentation, assessments, and approvals while
+        ensuring that products adhere to the Indian Standards. The products with
+        the standard mark are of exceptional quality and safety and can be sold
+        after undergoing type testing, factory inspections, and simple
+        certification of mandatory requirements.
       </ServiceParagraph>
-
-      <ServiceList
-        points={[
-          "Be an Indian citizen or a legally registered business entity in India",
-          "Have a physical address in India with a valid postal code",
-          "Be capable of communicating fluently in English and local languages",
-          "Understand the certification scheme, BIS documentation protocols, and regulatory expectations",
-          "Be able to respond to audits and correspondence promptly on behalf of the foreign manufacturer",
-        ]}
-      />
-
-      <SectionHeadingThree>Why the AIR Role is Vital</SectionHeadingThree>
 
       <ServiceParagraph>
-        The AIR ensures continuity and accountability throughout the BIS
-        certification process. Without an AIR:
+        The scheme X covers heavy machinery and electrical equipment safety
+        guidelines for products such as pumps, cranes, transformers, machine
+        tools and other heavy engineering products. These are the most pertinent
+        industries and all where reliability and safety is a necessity. Scheme
+        X is convenient as it shortens the time and costs of the complex BIS
+        certification. It aims to streamline the compliance process in order to
+        facilitate quicker clearance for marketing and enhanced reputation without
+        compromising the quality and safety standards. The enduring and
+        traditional reputation of the Bureau of Indian Standards enables easier
+        international trade, indispensable for companies to meet compliance
+        requirements and boost competitiveness.
       </ServiceParagraph>
-
-      <ServiceList
-        points={[
-          "BIS has no jurisdiction to act against a non-complying foreign manufacturer",
-          "Time-sensitive queries and audit schedules may get delayed",
-          "The certification process can get stuck, revoked, or rejected",
-        ]}
-      />
 
       <ServiceParagraph>
-        A proactive and experienced AIR significantly increases the chance of
-        successful BIS certification.
-      </ServiceParagraph>
-    </div>
-  );
-};
-
-const DocumentSection = () => {
-  return (
-    <div className="flex flex-col gap-5">
-      <SectionHeadingTwo>
-        Documentation Required for BIS Certification under FMCS
-      </SectionHeadingTwo>
-
-      <ServiceTable
-        className="mt-2"
-        headers={["DOCUMENT TYPE", "PURPOSE"]}
-        rows={[
-          ["FMCS Application Form", "Official request for certification"],
-          [
-            "Manufacturing Equipment List",
-            "Shows production capabilities",
-          ],
-          ["Raw Materials List", "Ensures input material quality"],
-          [
-            "Testing Equipment List",
-            "Evaluates testing and compliance readiness",
-          ],
-          [
-            "Calibration Certificates",
-            "Proves test equipment accuracy",
-          ],
-          [
-            "Factory Layout & Process Flow",
-            "Helps auditors understand manufacturing stages",
-          ],
-          [
-            "Test Certificates",
-            "Proves quality of raw materials and final product",
-          ],
-          [
-            "Quality Control Profile",
-            "Verifies staff qualifications and SOPs",
-          ],
-          ["Payment Proof", "Validates fee submission to BIS"],
-          [
-            "Performance Bank Guarantee",
-            "Acts as financial assurance for BIS",
-          ],
-        ]}
-      />
-
-      <SectionHeadingTwo as="h3">
-        Detailed Breakdown of Each document required to Indian BIS
-        certification
-      </SectionHeadingTwo>
-
-      <SectionHeadingThree>1. FMCS Application Form</SectionHeadingThree>
-
-      <ServiceParagraph>
-        This document provides general details about the foreign manufacturer,
-        including:
+        BIS Scheme X is mandatory to access the Indian heavy machine industry.
+        This new scheme is important for improved market competition, innovation
+        and compliance to regulations which are streamlined through this
+        simplified yet robust structure.
       </ServiceParagraph>
 
-      <ServiceList
-        points={[
-          "Product details (type, category, model)",
-          "Intended Indian Standard",
-          "Contact details of factory and AIR",
-          "Manufacturing capacity and testing scope",
-        ]}
-      />
+      <SchemeCallout>
+        Get complete details about BIS Scheme X Certification, Click:{" "}
+        <Link href="#" className={schemeLinkClass}>
+          Scheme X (Omnibus Technical Regulation)
+        </Link>
+      </SchemeCallout>
 
       <SectionHeadingThree>
-        2. List of Manufacturing Equipment
+        Compulsory Registration Scheme (CRS)
       </SectionHeadingThree>
-
-      <ServiceList
-        points={[
-          "Machine name and make",
-          "Production capacity",
-          "Contact details of factory and AIR",
-          "Maintenance records (if applicable)",
-        ]}
-      />
-
-      <SectionHeadingThree>3. List of Raw Materials</SectionHeadingThree>
-
-      <ServiceList
-        points={[
-          "Source of procurement",
-          "Grades and specifications",
-          "Testing protocol (if any)",
-        ]}
-      />
-
-      <SectionHeadingThree>4. List of Testing Equipment</SectionHeadingThree>
-
-      <ServiceList
-        points={[
-          "Equipment name and manufacturer",
-          "Compliance with test parameters in Indian Standard",
-          "Location within the factory",
-        ]}
-      />
-
-      <SectionHeadingThree>5. Calibration Certificates</SectionHeadingThree>
-
-      <ServiceList
-        points={[
-          "Date of last calibration",
-          "Validity period",
-          "Certificate number",
-        ]}
-      />
-
-      <SectionHeadingThree>
-        6. Factory Layout & Process Flow Diagram
-      </SectionHeadingThree>
-
-      <ServiceList
-        points={[
-          "Entry and exit points",
-          "Testing lab areas",
-          "QC checkpoints",
-          "Storage and packaging sections",
-        ]}
-      />
-
-      <SectionHeadingThree>7. Performance Bank Guarantee</SectionHeadingThree>
 
       <ServiceParagraph>
-        Issued by an RBI-approved Indian bank, the Performance Bank Guarantee
-        (PBG) covers liability in case of non-compliance. This document must:
+        The Bureau of Indian Standards (BIS) has developed a BIS certification
+        program called the Compulsory Registration Scheme (CRS) aimed at
+        regulating IT and electronic products in India. It focuses on assessing
+        the safety and quality of high-risk products like LED lights, mobile
+        phones, laptops, power banks, and other consumer electronics against
+        Indian Standards. CRS, in contrast to the ISI scheme, does not issue an
+        ISI mark, but certified products, in compliance with the scheme, bear a
+        CRS mark with a unique registration number. All electronics and IT
+        products need to be tested in the BIS-recognized laboratories and
+        formally registered with BIS CRS, used to ensure compliance before they
+        can be sold or imported into India.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        This scheme is essential for protecting Indian consumers from unsafe,
+        substandard, or counterfeit electronics, particularly in the case of the
+        rapidly growing digital market. Both Indian and foreign manufacturers
+        need to acquire CRS certification. The foreign companies must appoint an
+        Authorized Indian Representative AIR to ensure compliance. The BIS
+        continually updates the list of products covered under the CRS to include
+        new products and technologies and emerging safety issues. For
+        manufacturers, obtaining BIS registration under CRS is an added advantage
+        since it helps in regulatory compliance and it also increases
+        customer&apos;s trust, company&apos;s reputation, and market access in the
+        electronics industry in India.
+      </ServiceParagraph>
+
+      <SchemeCallout>
+        Get complete details about BIS CRS Certification, Click:{" "}
+        <Link href="#" className={schemeLinkClass}>
+          Compulsory Registration Scheme (CRS)
+        </Link>
+      </SchemeCallout>
+
+      <SectionHeadingThree>Hallmarking Scheme</SectionHeadingThree>
+
+      <ServiceParagraph>
+        In India, hallmarking of gold and silver jewellery is compulsory under
+        the Hallmarking Scheme and regulated by the Bureau of Indian Standards
+        (BIS) which guarantees the purity and genuineness of the jewellery.
+        Precious Metal articles are tested at BIS approved Assaying and
+        Hallmarking Centres (AHC) and are then stamped with hallmark signs. This
+        process is only completed if the articles fulfill the Indian Standards
+        laid out at the start. Jewelers must first acquire a BIS license which
+        allows them to sell hallmarked jewellery. This is the only way to do so
+        legally. The jeweler is obliged to undergo and complete product testing,
+        BIS audits, and continuous compliance monitoring to sell hallmarked
+        jewellery. The process, in the end, protects the consumer and ensures
+        the purity, weight and quality and limits malpractice as well as fraud in
+        the jewellery market.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        For Indian consumers, gold and silver are not just ornaments but also
+        major investments, which makes trust and transparency essential. The
+        hallmarking jewelry is a mark of assurance for the common citizen in the
+        country that every piece of jewelry for sale has gone through extensive
+        testing against various national benchmarks and fair trading practices.
+        Jewelers can showcase their credibility and market reputation by
+        hallmarking jewelry. The inability to comply with the rules set brings
+        punishment which can include suspension of license. For hallmarking under
+        BIS, it serves as a fulfillment of principle-based and legal
+        obligations. This not only increases consumer satisfaction but also
+        enhances the Indian jewellery market as a whole. This is also the case
+        for smaller retailers as well as larger scale manufacturers.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>Eco Mark Certification</SectionHeadingThree>
+
+      <ServiceParagraph>
+        The Eco Mark is an innovation-centered recognition scheme created by the
+        Bureau of Indian Standards (BIS) aimed at the promotion of eco-friendly
+        goods. Unlike the traditional certification which concerns itself
+        prominently with safety and quality parameters, the Eco Mark is awarded
+        to goods which conform to Indian Standards and which show at least some
+        reduced level of the adverse environmental impact during any one or more
+        of the various stages of the life cycle of the goods. Eco Mark
+        certification is awarded only after considerable testing and the proving
+        of criteria - compliance which includes emission levels, non-toxicity, the
+        rate of biodegrade, capacity to recycle and overall interactions with
+        the system. Eco Mark, just like the ISI mark, is an emblem of assurance
+        from the government which has been granted the status of a certification
+        mark, albeit with more pronounced goals of environmental sustainability.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        The BIS licence with Eco Mark certifies that a company engages in
+        responsible manufacturing and cares about the environment. It ensures
+        compliance with the law and creates a competitive advantage with
+        protective consumers and sustainability-oriented businesses. Eco Mark
+        helps for the industry to trust and adopt green practices and for the
+        consumers to trust that the products they buy are safe and environmentally
+        responsible. Eco Mark supports India&apos;s vision for enhanced quality
+        protection with environmental protection under BIS.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Management Systems Certification Scheme (MSCS)
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        The Management Systems Certification Scheme (MSCS) initiated by the Bureau
+        of Indian Standards (BIS) is a stepwise procedure which evaluates and
+        recognizes concerned firms for the implementation of internationally
+        accepted and recognized management systems. MSCS framework consists of
+        ISO Standards like ISO 9001 Quality Management, ISO 14001 Environment
+        Management, ISO 45001 Occupational Health and Safety Management System
+        and others. MSCS certifies the firm for the legal operations,
+        consistency, and continuous improvement of the operations. Certified
+        firms go through numerous assessments and audits which helps them build
+        trust among the customers, regulators, and stakeholders which strengthens
+        the guarantee of safety, quality, and sustainability.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        BIS is the national standards body of India and is the certifying body
+        for the enhancement of the organization&apos;s reputation and credibility
+        domestically and outside India. MSCS besides fostering accountability
+        through periodic supervision and recertification also frees up a
+        business to actively support public led programs like Make in India and
+        Atmanirbhar Bharat. Besides legal obligation, the scheme also helps in
+        cultivating a culture of integrity, efficiency and fair trading. MSCS
+        encourages the trade and investment by the certified companies and BIS
+        plays a crucial part in the development of the quality ecosystem of the
+        country.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>LRS – Lab Recognition Scheme</SectionHeadingThree>
+
+      <ServiceParagraph>
+        Under the Bureau of Indian Standards (BIS), the Lab Recognition Scheme
+        (LRS) is an integral part of a system that guarantees the dependability
+        and overall competency of laboratories that test and certify products for
+        BIS approval. Such labs are critically appraised on diverse attributes
+        which include technical knowledge, quality of the workforce,
+        infrastructure, and the overall competency and satisfaction of the lab
+        with the ISO/IEC 17025 standard. These labs, once approved, are permitted
+        to perform testing on the product for which conformity assessment is done
+        as part of various BIS certification programs such as the ISI Mark
+        Scheme and the Compulsory Registration Scheme (CRS). It is clear that for
+        manufacturers, in particular for importers and exporters, the reports
+        obtained from an LRS approved lab are a critical requirement to achieve a
+        BIS certificate that is a legal requirement for certain products.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        The LRS is empowering India&apos;s assurance systems by maintaining
+        equity in testing outcomes and ensuring that all outcomes are consistent
+        and globally benchmarked, while accrediting only reliable and sound
+        laboratories. To uphold integrity and transparency, BIS performs regular
+        audits, proficiency tests, and surveillance of recognized schematic labs.
+        Recognition of this certification enables BIS to improve trust from
+        consumers while making the certification process more efficient for
+        industries, as only safe, compliant, and high-quality products will be
+        offered in the Indian market. For organizations that aim to receive BIS
+        certification, collaboration with LRS-approved labs is the most essential
+        to achieve compliance and market access.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Products That Require BIS Certification
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        BIS certification applies to a wide variety of products. Examples
+        include:
       </ServiceParagraph>
 
       <ServiceList
         points={[
-          "Be on official bank letterhead",
-          "Indicate guarantee period and amount",
-          "Be signed and sealed",
+          "Electrical & Electronics – LED lights, mobile phones, adapters, laptops.",
+          "Construction Materials – Cement, steel bars, structural products.",
+          "Consumer Goods – Packaged drinking water, cooking gas cylinders.",
+          "Jewelry & Precious Metals – Gold and silver articles under hallmarking.",
+          "Industrial Equipment – Pumps, transformers, machine tools.",
         ]}
       />
 
-      <SectionHeadingThree>
-        Common documentation mistakes to avoid while applying for BIS
-        certificate or Indian BIS.
-      </SectionHeadingThree>
+      <ServiceParagraph>
+        The list continues to grow as new risks and technologies emerge.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>Benefits of BIS Certification</SectionHeadingThree>
+
+      <ServiceParagraph>
+        For companies, the BIS certificate offers much more than mere compliance
+        with the law.
+      </ServiceParagraph>
 
       <ServiceList
         points={[
-          "Mismatch between form data and factory reality",
-          "Submitting expired calibration reports",
-          "Missing BIS fee proof",
-          "Incomplete or vague process flows",
-          "Naming inconsistencies between documents",
+          "Legal compliance: no fines, no bans, no seizure.",
+          "Market access: needed for selling regulated products in India.",
+          "Consumer trust: builds with the well-recognized ISI mark as a sign of proof.",
+          "Competitive advantage: as certified companies easily differentiate from uncertified competitors.",
+          "Export facilitation: many international buyers understand and appreciate BIS certification.",
+          "Participation in Tenders: many government projects award contracts for goods which are BIS certified.",
         ]}
       />
     </div>
@@ -455,78 +581,207 @@ const DocumentSection = () => {
 };
 
 const ProcessSection = () => {
+  const processSteps = [
+    {
+      title: "Identify the Applicable Standard",
+      description:
+        "Determine the relevant Indian Standard (IS) that applies to the product.",
+    },
+    {
+      title: "Establish Testing Facilities",
+      description:
+        "Set up an in-house laboratory that meets the requirements of the applicable standard.",
+    },
+    {
+      title: "Create a BIS Portal Account",
+      description:
+        "Indian manufacturers must register on the BIS online portal to initiate the application.",
+    },
+    {
+      title: "Product Testing",
+      description:
+        "Get the product tested according to the applicable Indian Standard Specifications (ISS).",
+    },
+    {
+      title: "Application Submission",
+      description:
+        "File the BIS application along with the test report and required documents.",
+    },
+    {
+      title: "Query Resolution",
+      description:
+        "Respond to any clarification or queries raised by BIS officials.",
+    },
+    {
+      title: "Factory Inspection",
+      description:
+        "A BIS officer visits the manufacturing facility to verify compliance and inspect the production process.",
+    },
+    {
+      title: "Sample Verification",
+      description:
+        "During the inspection, samples are tested in the in-house lab and sealed for re-verification by the BIS officer.",
+    },
+    {
+      title: "Audit Completion",
+      description:
+        "Once the inspection and verification activities are completed, the audit is finalized.",
+    },
+    {
+      title: "Grant of Licence",
+      description:
+        "If all requirements are met, BIS grants the certification licence to the manufacturer.",
+    },
+  ];
+
   return (
     <div className="flex flex-col gap-5">
       <SectionHeadingTwo>
-        Step-by-Step BIS Certification Process Under FMCS
+        Procedure for Obtaining BIS Certification
       </SectionHeadingTwo>
 
-      <SectionHeadingThree>
-        Overview of the BIS Certification Journey
-      </SectionHeadingThree>
-
       <ServiceParagraph>
-        The BIS certification process under the Foreign Manufacturers
-        Certification Scheme (FMCS) is methodical, structured, and multi-phased.
-        It ensures that products comply with applicable Indian standards,
-        manufacturing processes are robust, and testing is accurate.
+        The process for securing a BIS certificate for both Indian and foreign
+        manufacturers generally follows these steps:
       </ServiceParagraph>
 
-      <SectionHeadingThree>
-        Step-by-Step BIS license Process Summary Table
-      </SectionHeadingThree>
-
-      <ServiceTable
-        className="mt-2"
-        headers={["STEP", "DESCRIPTION"]}
-        rows={[
-          ["1", "Application Submission to BIS FMCD"],
-          ["2", "Documentation Scrutiny and Initial Review"],
-          ["3", "Query Resolution & Clarification Submission"],
-          ["4", "Nomination of BIS Technical Auditor"],
-          ["5", "Factory Audit Scheduling & Coordination via AIR"],
-          ["6", "Factory Inspection & Sample Sealing by BIS Auditor"],
-          ["7", "In-House Product Testing (if applicable)"],
-          [
-            "8",
-            "Testing of Sealed Samples in BIS-Approved Labs in India",
-          ],
-          ["9", "Review of Test Reports & Audit Findings"],
-          ["10", "Issuance of BIS License and Use of ISI Mark"],
-        ]}
-      />
-
-      <SectionHeadingThree>
-        Sample copy of BIS FMCS certificate.
-      </SectionHeadingThree>
-
-      <SectionHeadingTwo as="h3">Timeframe to Obtain BIS Certificate</SectionHeadingTwo>
-
-      <SectionHeadingThree>
-        Typical Duration from Application to Certificate
-      </SectionHeadingThree>
-
-      <ServiceParagraph>
-        The BIS certification process under FMCS generally takes about 120
-        working days (approximately 3–4 months) from the date of correct
-        application submission. Delays often occur when documents are unclear
-        or if the factory isn&apos;t audit ready.
-      </ServiceParagraph>
-
-      <ServiceImage
-        src="/images/services/BISFM/biscertificate.png"
-        alt="Sample BIS FMCS certificate"
-        title="Sample BIS FMCS certificate"
-      />
-
-     
-
- 
+      <ul className="flex flex-col gap-5">
+        {processSteps.map((step, index) => (
+          <li key={index} className="flex items-start gap-3">
+            <div className="bg-neutral-100 p-1.5 rounded-full flex-shrink-0 flex items-center justify-center min-w-6 min-h-6 mt-0.5">
+              <Check size={12} className="text-neutral-800" />
+            </div>
+            <p className="font-inter text-sm md:text-base text-neutral-600 text-left max-w-full flex-1">
+              <span className="font-semibold text-neutral-800">
+                {step.title}:
+              </span>{" "}
+              {step.description}
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
 
-const CostingSection = () => {
+const DocumentsSection = () => {
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        Documents Required for BIS Certification
+      </SectionHeadingTwo>
+
+      <ServiceParagraph>
+        A strong documentation package ensures smooth processing. Key
+        requirements include:
+      </ServiceParagraph>
+
+      <ServiceList
+        points={[
+          "Business license or company registration documents.",
+          "Manufacturing process flow chart.",
+          "List of machinery and equipment.",
+          "Product details and technical specifications.",
+          "Test reports from BIS-recognized labs.",
+          "Quality control manual.",
+          "Trademark certificate.",
+        ]}
+      />
+
+      <SectionHeadingThree>For foreign manufacturers:</SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Appointment of an Authorized Indian Representative (AIR).",
+          "Proof of representation and identity documents.",
+        ]}
+      />
+    </div>
+  );
+};
+
+const CostSection = () => {
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>BIS Certification Cost</SectionHeadingTwo>
+
+      <ServiceTable
+        className="mt-2"
+        headers={["COST COMPONENT", "DETAILS"]}
+        rows={[
+          [
+            "Application Fee",
+            "One-time, non-refundable fee depending on product type",
+          ],
+          [
+            "Testing Charges",
+            "Based on complexity; paid to BIS-recognized labs",
+          ],
+          [
+            "Annual License Fee",
+            "Paid annually to maintain BIS license",
+          ],
+          [
+            "Inspection/Factory Audit Charges",
+            "Charged if BIS officials visit factory (domestic or international travel extra)",
+          ],
+          [
+            "Consultancy Charges (if applicable)",
+            "Optional, for end-to-end compliance help from consultants",
+          ],
+        ]}
+      />
+
+      <SectionHeadingThree>
+        BIS Certification Cost and Licence Fees
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        The cost of obtaining BIS certification varies depending on several
+        factors, including the product category, the applicable Indian Standard
+        (IS), and whether the manufacturer is based in India or overseas.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Fee Structure for BIS Registration (CRS)
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Government Fee: ₹53,000 + 18% GST per test report. An additional ₹20,000 is charged for each extra test report submitted within the same application.",
+          "Testing Charges: Applicable as per laboratory rates, which vary depending on the product and testing facility.",
+        ]}
+      />
+
+      <ServiceParagraph>
+        Note: Companies registered under the MSME Act may be eligible for certain
+        concessions on government fees.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Fee Structure for BIS Licence (ISI Certification)
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Application Fee: ₹1,000",
+          "Licence Fee: ₹1,000",
+          "Audit Charges: ₹7,000 per man-day for factory inspection",
+          "Testing Charges: Based on the product and testing laboratory",
+          "Minimum Marking Fee: Varies according to the product category.",
+        ]}
+      />
+
+      <ServiceParagraph>
+        For foreign manufacturers, additional charges apply under the Foreign
+        Manufacturers Certification Scheme (FMCS). The exact cost structure
+        depends on the specific case and applicable requirements.
+      </ServiceParagraph>
+    </div>
+  );
+};
+
+const AIRSection = () => {
   return (
     <div className="flex flex-col gap-5">
       <SectionHeadingTwo>
@@ -583,33 +838,7 @@ const CostingSection = () => {
   );
 };
 
-const SurveillanceSection = () => {
-  return (
-    <div className="flex flex-col gap-5">
-      <SectionHeadingTwo>
-        Post BIS Certification Surveillance and Compliance Requirements
-      </SectionHeadingTwo>
-
-      <ServiceParagraph>
-        Once a BIS certificate is granted, the responsibility doesn&apos;t end
-        there. The BIS certification includes an ongoing surveillance and
-        compliance system to ensure continuous adherence to Indian standards.
-        This post-certification phase is crucial to maintaining your BIS
-        license, retaining the right to use the ISI mark, and avoiding legal
-        penalties or suspensions.
-      </ServiceParagraph>
-
-      <ServiceParagraph>
-        Key Surveillance Components after obtaining BIS certificate Market
-        Surveillance : Random product sampling from the Indian market for
-        independent lab testing , if the sample fails the BIS certificate is
-        suspended. It is done twice every year.
-      </ServiceParagraph>
-    </div>
-  );
-};
-
-const FacilitatorSection = () => {
+const ConclusionSection = () => {
   return (
     <div className="flex flex-col gap-5">
       <SectionHeadingTwo>
@@ -705,11 +934,11 @@ const sections = [
     label: "CONCLUSION",
     section: <ConclusionSection />,
   },
-  {
-    id: "faqs",
-    label: "FAQS",
-    section: <FAQSection />,
-  },
+  // {
+  //   id: "faqs",
+  //   label: "FAQS",
+  //   section: <FAQSection />,
+  // },
 ];
 
 const BISCertification = () => {
