@@ -237,7 +237,110 @@ const StandardizationSection = () => {
 };
 
 const RepresentationSection = () => {
-  return <div className="flex flex-col gap-5"></div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        Role of Authorized Indian Representative (AIR) in BIS Certification
+      </SectionHeadingTwo>
+
+      <SectionHeadingThree>
+        What is an Authorized Indian Representative (AIR)?
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        An Authorized Indian Representative (AIR) is a crucial intermediary
+        appointed by a foreign manufacturer seeking BIS certification under the
+        FMCS registration scheme. The AIR serves as the official liaison between
+        the Bureau of Indian Standards (BIS) and the manufacturer, ensuring
+        smooth communication, documentation handling, and coordination of the
+        certification process.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>
+        Legal Requirement for AIR Appointment
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        As per BIS guidelines, any foreign manufacturer who does not have a
+        registered office in India must appoint an AIR. This requirement ensures
+        that BIS has a reliable, accessible point of contact within Indian
+        jurisdiction.
+      </ServiceParagraph>
+
+      <SectionHeadingThree>Key Responsibilities of the AIR</SectionHeadingThree>
+
+      <ServiceParagraph>
+        The AIR&apos;s role spans the entire BIS certification process, from
+        documentation and application submission to audit coordination and
+        post-certification compliance:
+      </ServiceParagraph>
+
+      <ServiceTable
+        className="mt-2"
+        headers={["RESPONSIBILITY", "DESCRIPTION"]}
+        rows={[
+          [
+            "Communication",
+            "Acts as the point of contact with BIS officers and departments",
+          ],
+          [
+            "Application Support",
+            "Assists in filling forms, compiling documents, and submitting the application",
+          ],
+          [
+            "Audit Coordination",
+            "Coordinates factory inspection schedules and addresses auditor queries",
+          ],
+          [
+            "Compliance Monitoring",
+            "Ensures all testing and certification activities meet BIS norms",
+          ],
+          [
+            "Renewal Management",
+            "Oversees BIS licence renewal, documentation updates, and fee payments",
+          ],
+        ]}
+      />
+
+      <SectionHeadingThree>
+        Eligibility Criteria to Become an AIR
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        To serve as an AIR, an individual or organization must :
+      </ServiceParagraph>
+
+      <ServiceList
+        points={[
+          "Be an Indian citizen or a legally registered business entity in India",
+          "Have a physical address in India with a valid postal code",
+          "Be capable of communicating fluently in English and local languages",
+          "Understand the certification scheme, BIS documentation protocols, and regulatory expectations",
+          "Be able to respond to audits and correspondence promptly on behalf of the foreign manufacturer",
+        ]}
+      />
+
+      <SectionHeadingThree>Why the AIR Role is Vital</SectionHeadingThree>
+
+      <ServiceParagraph>
+        The AIR ensures continuity and accountability throughout the BIS
+        certification process. Without an AIR:
+      </ServiceParagraph>
+
+      <ServiceList
+        points={[
+          "BIS has no jurisdiction to act against a non-complying foreign manufacturer",
+          "Time-sensitive queries and audit schedules may get delayed",
+          "The certification process can get stuck, revoked, or rejected",
+        ]}
+      />
+
+      <ServiceParagraph>
+        A proactive and experienced AIR significantly increases the chance of
+        successful BIS certification.
+      </ServiceParagraph>
+    </div>
+  );
 };
 
 const DocumentSection = () => {
