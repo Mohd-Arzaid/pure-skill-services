@@ -94,17 +94,34 @@ export const ServiceTable = ({
   headers,
   rows,
   emphasizeAllColumns = false,
+  className,
+  tableClassName,
+  headerRowClassName,
+  headerCellClassName,
+  bodyRowClassName,
+  bodyCellClassName,
 }) => (
-  <div className="overflow-x-auto my-2">
-    <Table className="min-w-full border border-neutral-200 rounded-lg overflow-hidden">
+  <div className={cn("overflow-x-auto", className)}>
+    <Table
+      className={cn(
+        "min-w-full border border-neutral-200 rounded-lg overflow-hidden",
+        tableClassName
+      )}
+    >
       <TableHeader>
-        <TableRow className="bg-[#F9F7F2] hover:bg-[#F9F7F2]/80">
+        <TableRow
+          className={cn(
+            "bg-[#F9F7F2] hover:bg-[#F9F7F2]/80",
+            headerRowClassName
+          )}
+        >
           {headers.map((header, index) => (
             <TableHead
               key={index}
               className={cn(
                 "font-semibold font-inter text-left text-base md:text-lg px-4 md:px-6 py-3 md:py-4 text-neutral-800",
-                index < headers.length - 1 && "border-r border-neutral-200"
+                index < headers.length - 1 && "border-r border-neutral-200",
+                headerCellClassName
               )}
             >
               {header}
@@ -116,7 +133,10 @@ export const ServiceTable = ({
         {rows.map((row, rowIndex) => (
           <TableRow
             key={rowIndex}
-            className="hover:bg-neutral-50 transition-colors"
+            className={cn(
+              "hover:bg-neutral-50 transition-colors",
+              bodyRowClassName
+            )}
           >
             {row.map((cell, cellIndex) => {
               const isLastColumn = cellIndex === row.length - 1;
@@ -129,7 +149,8 @@ export const ServiceTable = ({
                     isEmphasized
                       ? "font-medium text-neutral-800"
                       : "text-neutral-600",
-                    !isLastColumn && "border-r border-neutral-200"
+                    !isLastColumn && "border-r border-neutral-200",
+                    bodyCellClassName
                   )}
                 >
                   {cell}

@@ -116,6 +116,7 @@ const OverviewSection = () => {
       </SectionHeadingThree>
 
       <ServiceTable
+        className="mt-2"
         headers={["FEATURE", "DESCRIPTION"]}
         rows={[
           ["Applicability", "Foreign manufacturers only"],
@@ -139,11 +140,104 @@ const OverviewSection = () => {
 };
 
 const StandardizationSection = () => {
-  return <div>StandardizationSection</div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        BIS Mark: Compliance Requirements, Usage Rules, and Legal Guidelines
+      </SectionHeadingTwo>
+
+      <ServiceParagraph>
+        The BIS FMCS logo is issued by the Bureau of Indian Standards (BIS). It
+        signifies that products manufactured outside India comply with relevant
+        Indian Standards (IS) and are authorized for import and sale. The mark
+        includes a unique license number (e.g., CM/L-XXXXXXXXXX) and the IS
+        number. The logo must be accompanied by a unique 7 to 10-digit number
+        (CM/L-XXXXXXX) that identifies the specific foreign manufacturing unit.
+      </ServiceParagraph>
+
+      <ServiceParagraph>
+        For a product to bear the Indian BIS or ISI mark, it must pass through a
+        rigorous BIS certification process, including lab testing, factory
+        inspection, documentation audits, and compliance checks with Indian BIS
+        guidelines.
+      </ServiceParagraph>
+
+      <SectionHeadingThree as="h3">
+        According to the BIS Act, 2016 :
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Use of the ISI mark without a valid BIS license is punishable by law.",
+          "Certified products must display both the ISI logo and CM/L number (Certificate of Manufacturing License).",
+          "Violators may face product bans, fines, or even criminal prosecution.",
+        ]}
+      />
+
+      <ServiceImage
+        src="/images/services/BISFM/ISIMARKUpdated.jpg"
+        alt="ISI Mark logo"
+        title="ISI Mark logo"
+        className="w-full max-w-[300px] h-auto rounded-lg shadow-sm my-6 mx-auto border border-neutral-200 hover:shadow-md transition-shadow duration-300"
+      />
+
+      <SectionHeadingThree as="p">
+        The ISI logo typically consists of:
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          'The stylized letters "ISI" inside a rectangle with rounded corners',
+          "The CM/L number displayed beneath or adjacent to the mark",
+          "The reference Indian standard code number (e.g., IS 302 for electrical appliances)",
+        ]}
+      />
+
+      <SectionHeadingThree as="p">Placement must be:</SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Permanent and clearly visible on the product",
+          "On the packaging if not possible on the product",
+          "On user manuals in some product categories",
+        ]}
+      />
+
+      <SectionHeadingThree>
+        Indian BIS vs. Other Global Certifications
+      </SectionHeadingThree>
+
+      <ServiceParagraph>
+        Let's compare the ISI mark with other international symbols:
+      </ServiceParagraph>
+
+      <ServiceTable
+        className="my-2"
+        emphasizeAllColumns
+        headers={["MARK", "COUNTRY", "MANDATORY?", "FOCUS"]}
+        rows={[
+          ["ISI", "India", "Yes", "Product safety and quality"],
+          [
+            "CE",
+            "EU",
+            "Yes (for specific categories)",
+            "Health, safety, environment",
+          ],
+          ["UL", "USA", "No", "Safety standards (voluntary)"],
+          ["CCC", "China", "Yes", "Electrical goods safety"],
+        ]}
+      />
+
+      <ServiceParagraph>
+        Unlike UL (voluntary) or CE (region-specific), the ISI mark under the
+        BIS registration scheme is both compulsory and locally enforced.
+      </ServiceParagraph>
+    </div>
+  );
 };
 
 const RepresentationSection = () => {
-  return <div>RepresentationSection</div>;
+  return <div className="flex flex-col gap-5"></div>;
 };
 
 const DocumentSection = () => {
@@ -172,41 +266,41 @@ const sections = [
     label: "Overview",
     section: <OverviewSection />,
   },
-  // {
-  //   id: "standardization",
-  //   label: "Standardization",
-  //   section: <StandardizationSection />,
-  // },
-  // {
-  //   id: "representation",
-  //   label: "Representation",
-  //   section: <RepresentationSection />,
-  // },
-  // {
-  //   id: "document",
-  //   label: "Document",
-  //   section: <DocumentSection />,
-  // },
-  // {
-  //   id: "process",
-  //   label: "Process",
-  //   section: <ProcessSection />,
-  // },
-  // {
-  //   id: "costing",
-  //   label: "Costing",
-  //   section: <CostingSection />,
-  // },
-  // {
-  //   id: "surveillance",
-  //   label: "Surveillance",
-  //   section: <SurveillanceSection />,
-  // },
-  // {
-  //   id: "facilitator",
-  //   label: "Facilitator",
-  //   section: <FacilitatorSection />,
-  // },
+  {
+    id: "standardization",
+    label: "Standardization",
+    section: <StandardizationSection />,
+  },
+  {
+    id: "representation",
+    label: "Representation",
+    section: <RepresentationSection />,
+  },
+  {
+    id: "document",
+    label: "Document",
+    section: <DocumentSection />,
+  },
+  {
+    id: "process",
+    label: "Process",
+    section: <ProcessSection />,
+  },
+  {
+    id: "costing",
+    label: "Costing",
+    section: <CostingSection />,
+  },
+  {
+    id: "surveillance",
+    label: "Surveillance",
+    section: <SurveillanceSection />,
+  },
+  {
+    id: "facilitator",
+    label: "Facilitator",
+    section: <FacilitatorSection />,
+  },
 ];
 
 const BISFM = () => {

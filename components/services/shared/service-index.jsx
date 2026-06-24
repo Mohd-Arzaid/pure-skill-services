@@ -103,7 +103,7 @@ const ServiceIndex = ({ index }) => {
     >
       {/* Mobile Menu Button */}
       <div className="md:hidden flex items-center justify-between px-4 h-20">
-        <div className="text-base font-semibold font-geist tracking-wider uppercase text-blue-900">
+        <div className="text-base font-medium font-inter tracking-wider uppercase text-blue-900">
           {menuLabels[activeSection]}
         </div>
         <button
@@ -154,7 +154,7 @@ const ServiceIndex = ({ index }) => {
                     : "text-blue-950 hover:bg-blue-50"
                 }`}
               >
-                <div className="font-geist tracking-wider uppercase">
+                <div className="font-inter tracking-wider uppercase">
                   {menuLabels[item]}
                 </div>
               </div>
@@ -171,7 +171,7 @@ const ServiceIndex = ({ index }) => {
             className="relative cursor-pointer group whitespace-nowrap px-2"
           >
             <div
-              className={`text-base font-semibold font-geist tracking-wider uppercase transition-colors duration-300 ${
+              className={`text-sm font-medium font-inter tracking-wider uppercase transition-colors duration-300 ${
                 item === activeSection
                   ? "text-blue-900"
                   : "text-blue-950 group-hover:text-blue-900"
