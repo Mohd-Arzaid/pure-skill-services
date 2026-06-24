@@ -344,7 +344,158 @@ const RepresentationSection = () => {
 };
 
 const DocumentSection = () => {
-  return <div>DocumentSection</div>;
+  return (
+    <div className="flex flex-col gap-5">
+      <SectionHeadingTwo>
+        Documentation Required for BIS Certification under FMCS
+      </SectionHeadingTwo>
+
+      <ServiceTable
+        className="mt-2"
+        headers={["DOCUMENT TYPE", "PURPOSE"]}
+        rows={[
+          ["FMCS Application Form", "Official request for certification"],
+          [
+            "Manufacturing Equipment List",
+            "Shows production capabilities",
+          ],
+          ["Raw Materials List", "Ensures input material quality"],
+          [
+            "Testing Equipment List",
+            "Evaluates testing and compliance readiness",
+          ],
+          [
+            "Calibration Certificates",
+            "Proves test equipment accuracy",
+          ],
+          [
+            "Factory Layout & Process Flow",
+            "Helps auditors understand manufacturing stages",
+          ],
+          [
+            "Test Certificates",
+            "Proves quality of raw materials and final product",
+          ],
+          [
+            "Quality Control Profile",
+            "Verifies staff qualifications and SOPs",
+          ],
+          ["Payment Proof", "Validates fee submission to BIS"],
+          [
+            "Performance Bank Guarantee",
+            "Acts as financial assurance for BIS",
+          ],
+        ]}
+      />
+
+      <SectionHeadingTwo>
+        Detailed Breakdown of Each document required to Indian BIS
+        certification
+      </SectionHeadingTwo>
+
+      <SectionHeadingThree>1. FMCS Application Form</SectionHeadingThree>
+
+      <ServiceParagraph>
+        This document provides general details about the foreign manufacturer,
+        including:
+      </ServiceParagraph>
+
+      <ServiceList
+        points={[
+          "Product details (type, category, model)",
+          "Intended Indian Standard",
+          "Contact details of factory and AIR",
+          "Manufacturing capacity and testing scope",
+        ]}
+      />
+
+      <SectionHeadingThree>
+        2. List of Manufacturing Equipment
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Machine name and make",
+          "Production capacity",
+          "Contact details of factory and AIR",
+          "Maintenance records (if applicable)",
+        ]}
+      />
+
+      <SectionHeadingThree>3. List of Raw Materials</SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Source of procurement",
+          "Grades and specifications",
+          "Testing protocol (if any)",
+        ]}
+      />
+
+      <SectionHeadingThree>4. List of Testing Equipment</SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Equipment name and manufacturer",
+          "Compliance with test parameters in Indian Standard",
+          "Location within the factory",
+        ]}
+      />
+
+      <SectionHeadingThree>5. Calibration Certificates</SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Date of last calibration",
+          "Validity period",
+          "Certificate number",
+        ]}
+      />
+
+      <SectionHeadingThree>
+        6. Factory Layout & Process Flow Diagram
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Entry and exit points",
+          "Testing lab areas",
+          "QC checkpoints",
+          "Storage and packaging sections",
+        ]}
+      />
+
+      <SectionHeadingThree>7. Performance Bank Guarantee</SectionHeadingThree>
+
+      <ServiceParagraph>
+        Issued by an RBI-approved Indian bank, the Performance Bank Guarantee
+        (PBG) covers liability in case of non-compliance. This document must:
+      </ServiceParagraph>
+
+      <ServiceList
+        points={[
+          "Be on official bank letterhead",
+          "Indicate guarantee period and amount",
+          "Be signed and sealed",
+        ]}
+      />
+
+      <SectionHeadingThree>
+        Common documentation mistakes to avoid while applying for BIS
+        certificate or Indian BIS.
+      </SectionHeadingThree>
+
+      <ServiceList
+        points={[
+          "Mismatch between form data and factory reality",
+          "Submitting expired calibration reports",
+          "Missing BIS fee proof",
+          "Incomplete or vague process flows",
+          "Naming inconsistencies between documents",
+        ]}
+      />
+    </div>
+  );
 };
 
 const ProcessSection = () => {
