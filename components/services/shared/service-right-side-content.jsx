@@ -194,7 +194,7 @@ const BIS_QCO_Updates = () => {
 
                 <div className="flex-1 flex flex-col justify-between h-20 py-1 font-inter">
                   <div className="flex-1 font-inter">
-                    <p className="line-clamp-2 text-sm  text-neutral-800 font-inter">
+                    <p className="line-clamp-2 text-[13px] leading-[17px] text-neutral-800 font-inter">
                       {post.title}
                     </p>
                   </div>
@@ -202,7 +202,7 @@ const BIS_QCO_Updates = () => {
                     <Link href={post.url} passHref>
                       <Button
                         variant="link"
-                        className="text-blue-900 hover:text-blue-950 p-0 h-auto text-sm font-inter"
+                        className="text-blue-900 hover:text-blue-950 p-0 h-auto text-[13px] leading-[17px] font-inter"
                       >
                         Read More
                         <ArrowRightIcon className="ml-1 h-3 w-3 font-inter" />
@@ -348,17 +348,17 @@ const Client_Testimonials = () => {
             className="[--duration:60s]"
           >
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="group mb-6 font-inter">
-                <div className="bg-white p-4 rounded-lg border border-gray-300 shadow-sm hover:shadow-md transition-shadow duration-200 font-inter">
-                  <div className="mb-3 font-inter">
-                    <div className="font-bold text-neutral-800 text-base font-inter">
+              <div key={index} className="group mb-3">
+                <div className="bg-white p-4 rounded-lg border border-neutral-300 shadow-sm hover:shadow-md transition-shadow duration-200">
+                  <div className="mb-4 font-inter">
+                    <div className="font-semibold text-neutral-800 text-base font-inter">
                       {testimonial.name}
                     </div>
-                    <p className="text-sm text-neutral-600 mt-1 font-inter">
+                    <p className="text-[13px] leading-[17px] text-neutral-600 mt-1 font-inter">
                       {testimonial.role}
                     </p>
                   </div>
-                  <p className="italic text-neutral-700 text-sm leading-relaxed font-medium font-inter">
+                  <p className="italic text-neutral-800 text-sm  font-inter">
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
                 </div>
@@ -543,54 +543,54 @@ const Contact_form = () => {
 
       <form className="mt-5 space-y-4 font-inter">
         <div className="relative font-inter">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none font-inter">
-            <User className="h-5 w-5 text-gray-400" />
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none font-inter">
+            <User className="h-4 w-4 text-gray-400" />
           </div>
           <input
             type="text"
             name="fullName"
             required
             placeholder="Your Name*"
-            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
           />
         </div>
 
         <div className="relative font-inter">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none font-inter">
-            <Phone className="h-5 w-5 text-gray-400" />
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none font-inter">
+            <Phone className="h-4 w-4 text-gray-400" />
           </div>
           <input
             type="tel"
             name="phoneNumber"
             required
             placeholder="Phone Number*"
-            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
           />
         </div>
 
         <div className="relative font-inter">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none font-inter">
-            <Mail className="h-5 w-5 text-gray-400" />
+          <div className="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none font-inter">
+            <Mail className="h-4 w-4 text-gray-400" />
           </div>
           <input
             type="email"
             name="email"
             required
             placeholder="Email Address*"
-            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
           />
         </div>
 
         <div className="relative font-inter">
           <div className="absolute top-3 left-3 pointer-events-none font-inter">
-            <MessageCircle className="h-5 w-5 text-gray-400" />
+            <MessageCircle className="h-4 w-4 text-gray-400" />
           </div>
           <textarea
             name="message"
             required
             placeholder="Required Certification*"
             rows="3"
-            className="w-full py-2.5 pl-10 pr-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
+            className="w-full py-2.5 pl-10 pr-3 text-sm bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all font-inter"
           ></textarea>
         </div>
 
