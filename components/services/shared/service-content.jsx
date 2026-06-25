@@ -122,7 +122,7 @@ export const ServiceTable = ({
             <TableHead
               key={index}
               className={cn(
-                "font-semibold font-inter text-left text-base md:text-lg px-4 md:px-6 py-3 md:py-4 text-neutral-800",
+                "font-semibold font-inter text-left text-sm md:text-base  px-4 md:px-6 py-3 md:py-4 text-neutral-800",
                 index < headers.length - 1 && "border-r border-neutral-200",
                 headerCellClassName
               )}
