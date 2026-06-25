@@ -7,6 +7,7 @@ import ServiceSection from "./service-section";
 import ServiceAuthor from "./service-author";
 import ServiceRightSideContent from "./service-right-side-content";
 import ServiceFaq from "./service-faq";
+import ServiceLanguageSelector from "./service-language-selector";
 
 const ServicePageLayout = ({
   breadcrumbLabel,
@@ -14,6 +15,7 @@ const ServicePageLayout = ({
   intro,
   sections,
   faqs,
+  languages,
 }) => {
   // basically agar faqs hai toh sections ke end mai FAQs add kardenge in index
   const sectionsWithFaqs =
@@ -29,7 +31,7 @@ const ServicePageLayout = ({
       />
       <ServiceIndex index={sectionsWithFaqs} />
 
-      <div className="max-w-[88rem] mx-auto px-4 py-8 md:px-12 md:py-1">
+      <div className="max-w-[88rem] mx-auto px-4 py-8 md:px-12 md:pt-12 md:pb-5">
         <div className="flex flex-col md:flex-row gap-6 md:gap-[48px] w-full">
           {/* Left Side */}
           <div className="flex-1">
@@ -53,6 +55,7 @@ const ServicePageLayout = ({
         </div>
       </div>
       {faqs?.length > 0 && <ServiceFaq faqs={faqs} />}
+      <ServiceLanguageSelector languages={languages} />
     </div>
   );
 };

@@ -8,10 +8,10 @@ import {
 const ServiceFaq = ({ faqs }) => (
   <section
     id="faqs"
-    className="my-2 scroll-mt-28"
+    className="scroll-mt-28"
     aria-label="Frequently Asked Questions"
   >
-    <div className="max-w-5xl mx-auto px-4 py-8 md:p-12">
+    <div className="max-w-5xl mx-auto px-4 py-8 md:pt-12">
       <h2 className="text-xl md:text-3xl text-center font-inter font-semibold text-neutral-900">
         Frequently Asked Questions
       </h2>
