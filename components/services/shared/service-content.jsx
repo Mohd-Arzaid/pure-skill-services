@@ -10,6 +10,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
+import Link from "next/link";
 
 // Service Left Side Content
 
@@ -78,18 +79,54 @@ export const ServiceSeparator = ({ className }) => (
   <div className={cn("h-px w-full bg-neutral-200", className)} />
 );
 
+export const ServiceCallout = ({ about, linkText, href, className }) => (
+  <div
+    className={cn(
+      "rounded-md bg-blue-50 px-4 py-4 border-l-4 border-blue-600",
+      className
+    )}
+  >
+    <div className="font-inter text-sm md:text-base text-neutral-800 flex flex-col gap-1">
+      <span>Get complete details about {about}</span>
+
+      <Link
+        href={href}
+        className="font-inter text-sm md:text-base text-blue-900 hover:text-blue-800 underline underline-offset-4"
+      >
+        {linkText}
+      </Link>
+    </div>
+  </div>
+);
+
 export const ServiceList = ({ as: Tag = "p", points, className }) => (
   <ul className={cn("flex flex-col gap-5", className)}>
-    {points.map((point, index) => (
-      <li key={index} className="flex items-start gap-3">
-        <div className="bg-neutral-100  p-1.5 rounded-full flex-shrink-0 flex items-center justify-center min-w-6 min-h-6 mt-0.5">
-          <Check size={12} className="text-neutral-800" />
-        </div>
-        <Tag className="font-inter text-sm md:text-base text-neutral-600  text-left max-w-full flex-1">
-          {point}
-        </Tag>
-      </li>
-    ))}
+    {points.map((point, index) => {
+      const { text, href } =
+        typeof point === "string" ? { text: point } : point;
+
+      return (
+        <li key={index} className="flex items-start gap-3">
+          <div className="bg-neutral-100  p-1.5 rounded-full flex-shrink-0 flex items-center justify-center min-w-6 min-h-6 mt-0.5">
+            <Check size={12} className="text-neutral-800" />
+          </div>
+          {href ? (
+            <Link
+              href={href}
+              className={cn(
+                "font-inter text-sm md:text-base text-blue-900 hover:text-blue-800 underline underline-offset-4 text-left max-w-full flex-1 "
+              )}
+            >
+              {text}
+            </Link>
+          ) : (
+            <Tag className="font-inter text-sm md:text-base text-neutral-600  text-left max-w-full flex-1">
+              {text}
+            </Tag>
+          )}
+        </li>
+      );
+    })}
   </ul>
 );
 

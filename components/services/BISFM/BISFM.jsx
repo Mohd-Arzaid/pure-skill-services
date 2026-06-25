@@ -893,7 +893,6 @@ const BISFM = () => {
   return (
     <ServicePageLayout
       breadcrumbLabel="BIS Mark (ISI License) for Foreign Manufacturers"
-      lang="en"
       hero={hero}
       intro={intro}
       sections={sections}
