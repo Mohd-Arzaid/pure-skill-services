@@ -1,20 +1,9 @@
-import ServicePageLayout from "../shared/service-page-layout";
-
-const hero = {
-  headingUpper: "Certificación BIS",
-  headingLower: "para fabricantes extranjeros",
-  description:
-    "Los fabricantes extranjeros necesitan la marca ISI para exportar a India. Cubre 600+ productos obligatorios y 20,000+ productos voluntarios.",
-};
+import React from 'react'
 
 const BISFMSpanish = () => {
   return (
-    <ServicePageLayout
-      breadcrumbLabel="Marca BIS (Licencia ISI) para Fabricantes Extranjeros"
-      lang="es"
-      hero={hero}
-    />
-  );
-};
+    <div>BISFMSpanish</div>
+  )
+}
 
-export default BISFMSpanish;
+export default BISFMSpanish

@@ -12,12 +12,6 @@ const ServiceHero = ({
       {/* Background gradient */}
       <div className="hidden md:block absolute inset-0 rounded-bl-full z-10 transform translate-x-1/2 custom-radial-gradient-cdsco"></div>
 
-      {/* Decorative elements */}
-      <div
-        className="absolute top-[20%] z-[10] right-[15%] w-[20px] h-[20px] rounded-full bg-[#1A8781]/30 animate-float"
-        style={{ animationDelay: "1s" }}
-      ></div>
-
       <div className="max-w-[75rem] gap-10 md:gap-16 flex flex-col md:flex-row items-center justify-center h-full w-full mx-auto px-4 md:px-0">
         {/* Left Side */}
         <div className="relative flex flex-col gap-6 md:gap-8 w-full md:max-w-lg items-start">
