@@ -8,6 +8,7 @@ import ServiceAuthor from "./service-author";
 import ServiceRightSideContent from "./service-right-side-content";
 import ServiceFaq from "./service-faq";
 import ServiceLanguageSelector from "./service-language-selector";
+import Services from "./services";
 
 const ServicePageLayout = ({
   breadcrumbLabel,
@@ -56,6 +57,7 @@ const ServicePageLayout = ({
       </div>
       {faqs?.length > 0 && <ServiceFaq faqs={faqs} />}
       <ServiceLanguageSelector languages={languages} />
+      <Services />
     </div>
   );
 };
