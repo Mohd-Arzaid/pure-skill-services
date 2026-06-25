@@ -562,13 +562,199 @@ const SchemesSection = () => {
   );
 };
 
+const ProcessSection = () => (
+  <div className="flex flex-col gap-5">
+    <SectionHeadingTwo>
+      Procedure for Obtaining BIS Certification
+    </SectionHeadingTwo>
+
+    <ServiceParagraph>
+      The process for securing a BIS certificate for both Indian and foreign
+      manufacturers generally follows these key steps:
+    </ServiceParagraph>
+
+    <ServiceList
+      points={[
+        "Identify the Applicable Standard: Determine the relevant Indian Standard (IS) that applies to the product.",
+        "Establish Testing Facilities: Set up an in-house laboratory that meets the requirements of the applicable standard.",
+        "Create a BIS Portal Account: Indian manufacturers must register on the BIS online portal to initiate the application.",
+        "Product Testing: Get the product tested according to the applicable Indian Standard Specifications (ISS).",
+        "Application Submission: File the BIS application along with the test report and required documents.",
+        "Query Resolution: Respond to any clarification or queries raised by BIS officials.",
+        "Factory Inspection: A BIS officer visits the manufacturing facility to verify compliance and inspect the production process.",
+        "Sample Verification: During the inspection, samples are tested in the in-house lab and sealed for re-verification by the BIS officer.",
+        "Audit Completion: Once the inspection and verification activities are completed, the audit is finalized.",
+        "Grant of Licence: If all requirements are met, BIS grants the certification licence to the manufacturer.",
+      ]}
+    />
+  </div>
+);
 
 
-const DocumentsSection = () => <></>
-const CostSection = () => <></>
-const AirSection = () => <></>
-const ConclusionSection = () => <></>
-const ProcessSection = () => <></>
+const DocumentsSection = () => (
+  <div className="flex flex-col gap-5">
+    <SectionHeadingTwo>
+      Documents Required for BIS Certification
+    </SectionHeadingTwo>
+
+    <ServiceParagraph>
+      A strong documentation package ensures smooth processing. Key requirements
+      include:
+    </ServiceParagraph>
+
+    <ServiceList
+      points={[
+        "Business license or company registration documents.",
+        "Manufacturing process flow chart.",
+        "List of machinery and equipment.",
+        "Product details and technical specifications.",
+        "Test reports from BIS-recognized labs.",
+        "Quality control manual.",
+        "Trademark certificate.",
+      ]}
+    />
+
+    <SectionHeadingThree>For foreign manufacturers:</SectionHeadingThree>
+
+    <ServiceList
+      points={[
+        "Appointment of an Authorized Indian Representative (AIR).",
+        "Proof of representation and identity documents.",
+      ]}
+    />
+  </div>
+);
+
+const CostSection = () => (
+  <div className="flex flex-col gap-5">
+    <SectionHeadingTwo>BIS Certification Cost</SectionHeadingTwo>
+
+    <ServiceTable
+      className="mt-2"
+      headers={["Cost Component", "Details"]}
+      rows={[
+        [
+          "Application Fee",
+          "One-time, non-refundable fee depending on product type",
+        ],
+        [
+          "Testing Charges",
+          "Based on complexity; paid to BIS-recognized labs",
+        ],
+        [
+          "Annual License Fee",
+          "Paid annually to maintain BIS license",
+        ],
+        [
+          "Inspection/Factory Audit Charges",
+          "Charged if BIS officials visit factory (domestic or international travel extra)",
+        ],
+        [
+          "Consultancy Charges (if applicable)",
+          "Optional, for end-to-end compliance help from consultants",
+        ],
+      ]}
+    />
+
+    <SectionHeadingThree>
+      BIS Certification Cost and Licence Fees
+    </SectionHeadingThree>
+
+    <ServiceParagraph>
+      The cost of obtaining BIS certification varies depending on several factors,
+      including the product category, the applicable Indian Standard (IS), and
+      whether the manufacturer is based in India or overseas.
+    </ServiceParagraph>
+
+    <SectionHeadingThree>
+      Fee Structure for BIS Registration (CRS)
+    </SectionHeadingThree>
+
+    <ServiceList
+      points={[
+        "Government Fee: ₹53,000 + 18% GST per test report. An additional ₹20,000 is charged for each extra test report submitted within the same application.",
+        "Testing Charges: Applicable as per laboratory rates, which vary depending on the product and testing facility.",
+      ]}
+    />
+
+    <ServiceParagraph>
+      Note: Companies registered under the MSME Act may be eligible for certain
+      concessions on government fees.
+    </ServiceParagraph>
+
+    <SectionHeadingThree>
+      Fee Structure for BIS Licence (ISI Certification)
+    </SectionHeadingThree>
+
+    <ServiceList
+      points={[
+        "Application Fee: ₹1,000",
+        "Licence Fee: ₹1,000",
+        "Audit Charges: ₹7,000 per man-day for factory inspection",
+        "Testing Charges: Based on the product and testing laboratory",
+        "Minimum Marking Fee: Varies according to the product category.",
+      ]}
+    />
+
+    <ServiceParagraph>
+      For foreign manufacturers, additional charges apply under the Foreign
+      Manufacturers Certification Scheme (FMCS). The exact cost structure
+      depends on the specific case and applicable requirements.
+    </ServiceParagraph>
+  </div>
+);
+
+const AirSection = () => (
+  <div className="flex flex-col gap-5">
+    <SectionHeadingTwo>
+      Role of Authorized Indian Representative (AIR)
+    </SectionHeadingTwo>
+
+    <ServiceParagraph>
+      For foreign manufacturers, the Authorized Indian Representative (AIR) is
+      critical.
+    </ServiceParagraph>
+
+    <ServiceList
+      points={[
+        "Handles all communication with BIS.",
+        "Gathers and submits documents, then facilitates the inspection process.",
+        "Ensures compliance regarding certification, before, and after.",
+        "Must be an Indian citizen or an organization with a registered local address.",
+      ]}
+    />
+
+    <ServiceParagraph>
+      In the absence of an AIR, obtaining BIS certification for foreign
+      companies is impossible.
+    </ServiceParagraph>
+  </div>
+);
+
+const ConclusionSection = () => (
+  <div className="flex flex-col gap-5">
+    <SectionHeadingTwo>Conclusion</SectionHeadingTwo>
+
+    <ServiceParagraph>
+      Having a BIS certification is a necessity for doing business in India. It
+      is no longer an optional certification in business. It is crucial for
+      business success and building trust. BIS is essential for safety and
+      success in India. For manufacturers and importers, it offers an easy and
+      safe business setup environment. Legal issues and fines are no longer a
+      concern. With a BIS mark, consumer trust is guaranteed.
+    </ServiceParagraph>
+
+    <ServiceParagraph>
+      India is one of the biggest growing economies in the world and gaining
+      access to sell there can help an exporter grow. No matter if you are a
+      manufacturer in India or abroad, the BIS license is needed to manufacture
+      or sell products in the Indian market. It&apos;s required, and it unlocks
+      business prospects with India&apos;s growing population. It&apos;s an
+      investment in safety, consumer trust, brand reputation, credibility, and
+      long-term growth.
+    </ServiceParagraph>
+  </div>
+);
 
 const sections = [
   {
@@ -598,7 +784,7 @@ const sections = [
   },
   {
     id: "air",
-    label: "Air",
+    label: "AIR",
     section: <AirSection />,
   },
   {
