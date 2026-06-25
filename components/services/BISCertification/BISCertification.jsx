@@ -796,80 +796,130 @@ const sections = [
 
 const faqs = [
   {
+    question: "What is BIS certification in India?",
+    answer:
+      "BIS certification is a quality assurance certification issued by the Bureau of Indian Standards (BIS) to ensure that products comply with Indian standards for safety, performance, and quality. It is mandatory for various product categories and helps in consumer protection and regulatory compliance.",
+  },
+  {
+    question: "Why do I need a BIS certificate?",
+    answer:
+      "A BIS certificate is essential to legally manufacture, import, distribute, or sell certain products in India. It assures consumers that the product meets the safety and quality guidelines of Indian standards.",
+  },
+  {
+    question: "What is the ISI mark under BIS certification?",
+    answer:
+      "The ISI mark is a certification symbol provided under the BIS certification scheme. It indicates that a product complies with Indian standards and has been certified by the Indian BIS through proper testing and registration.",
+  },
+  {
+    question: "Who issues BIS licenses in India?",
+    answer:
+      "BIS licenses are issued by the Bureau of Indian Standards (Indian BIS), the national standards body under the Ministry of Consumer Affairs, Food and Public Distribution.",
+  },
+  {
+    question: "What are the different types of BIS certification schemes?",
+    answer:
+      "The major BIS certification schemes include the ISI mark scheme, Compulsory Registration Scheme (CRS), Foreign Manufacturers Certification Scheme (FMCS), Hallmarking for jewelry, Eco Mark certification, and Scheme X for industrial machinery.",
+  },
+  {
+    question: "What is Scheme X under BIS certification?",
+    answer:
+      "Scheme X is a simplified BIS certification process applicable to industrial products like pumps, transformers, machine tools, and cranes. It ensures quicker approval without compromising compliance to Indian standards.",
+  },
+  {
+    question: "Which products require BIS certification in India?",
+    answer:
+      "Products like electrical appliances, electronics, kitchenware, cement, steel, gold jewelry, mobile phones, and transformers require BIS certification as per the Indian BIS mandate.",
+  },
+  {
+    question: "Is BIS registration mandatory for all products?",
+    answer:
+      "No, BIS registration is mandatory only for products listed in the compulsory certification scheme. However, voluntary BIS certification is also available to enhance product credibility.",
+  },
+  {
+    question: "How long is a BIS licence valid?",
+    answer:
+      "A BIS licence is typically valid for one to two years and must be renewed before its expiry to continue using the ISI mark or maintain BIS registration status.",
+  },
+  {
+    question: "What are the steps to get BIS certification in India?",
+    answer:
+      "The BIS certification process includes identifying applicable Indian standards, submitting an application, product testing, factory inspection, and issuance of a BIS certificate upon approval.",
+  },
+  {
+    question: "Can foreign manufacturers apply for a BIS license?",
+    answer:
+      "Yes, under the Foreign Manufacturers Certification Scheme (FMCS), foreign companies can apply for a BIS license to sell products in India. They must appoint an Authorized Indian Representative (AIR).",
+  },
+  {
+    question: "What is the role of the AIR in BIS certification?",
+    answer:
+      "An AIR (Authorized Indian Representative) acts as a liaison between the foreign manufacturer and the Indian BIS. They are responsible for documentation, communication, and compliance with BIS certification requirements.",
+  },
+  {
+    question: "How can I apply for BIS registration online?",
+    answer:
+      "You can apply for BIS registration online through the official BIS portal. The process involves form submission, uploading documents, test reports, and payment of fees.",
+  },
+  {
+    question: "What documents are required for a BIS certificate?",
+    answer:
+      "Documents needed include business license, product specifications, manufacturing process, lab test reports, factory layout, quality manual, and authorization forms (for foreign manufacturers).",
+  },
+  {
+    question: "How much does BIS certification cost in India?",
+    answer:
+      "The cost of BIS certification depends on product type, testing requirements, scheme type (ISI, CRS, FMCS), and whether the applicant is domestic or foreign. Costs include application fees, testing charges, and inspection expenses.",
+  },
+  {
+    question: "Is the ISI mark mandatory for all BIS-certified products?",
+    answer:
+      "No, only products under the ISI scheme are required to carry the ISI mark. Products under CRS or Hallmarking schemes follow different labeling protocols as per BIS registration norms.",
+  },
+  {
+    question: "Can I get BIS certification for eco-friendly products?",
+    answer:
+      "Yes, products that meet environmental standards can get BIS certification under the Eco Mark scheme, which ensures compliance with Indian standards for environmental safety.",
+  },
+  {
     question:
-      "What is BIS certification and why is it important for foreign manufacturers to obtain Indian BIS?",
+      "What is the difference between BIS certification and BIS registration?",
     answer:
-      "BIS certification is a regulatory process conducted by the Bureau of Indian Standards to ensure products meet Indian standards. It is essential for foreign manufacturers to gain market access, customs clearance, and consumer trust in India.",
+      "BIS certification generally refers to the approval under ISI, FMCS, or Hallmarking schemes, while BIS registration is commonly associated with the CRS scheme for electronic products.",
   },
   {
-    question: "What does the ISI mark represent?",
+    question: "What is the Compulsory Registration Scheme (CRS)?",
     answer:
-      "The ISI mark indicates conformity to a specific Indian Standard. It is mandatory for products under the BIS certification and must be printed on packaging and products.",
+      "CRS is a BIS registration program for IT and electronic goods like LED lights, mobile phones, and power banks. It ensures product compliance with safety-related Indian standards.",
   },
   {
-    question: "Is BIS certification mandatory for all imports to India?",
+    question: "Do ISI mark and BIS certificate mean the same thing?",
     answer:
-      "No. BIS certification is mandatory for products listed under the mandatory Indian BIS certification scheme. However, voluntary certification is available for other products.",
+      "Not exactly. The ISI mark is the symbol granted to certified products under the BIS certification scheme. A BIS certificate is the legal document issued to the manufacturer.",
   },
   {
-    question: "Who can apply for BIS certification under FMCS?",
+    question: "Can one BIS license cover multiple products?",
     answer:
-      "Only actual foreign manufacturers (not importers or traders) can apply. An Authorized Indian Representative (AIR) is mandatory to represent them in India.",
+      "No, a separate BIS licence is required for each product type and each manufacturing location, even if the products are similar.",
   },
   {
-    question: "How long does it take to get a BIS certificate?",
+    question: "What happens if I sell products without BIS certification?",
     answer:
-      "The average BIS certification process under FMCS takes 120 days, depending on document readiness, audit scheduling, and testing turnaround times.",
+      "Selling products that require BIS certification without a valid BIS licence is illegal in India and can lead to penalties, product recalls, or bans.",
   },
   {
-    question: "What are the major costs involved in BIS certification?",
+    question: "How long does it take to get BIS certification?",
     answer:
-      "Costs include application fees, audit charges, lab testing fees, license and marking fees, and a Performance Bank Guarantee (PBG) from an RBI-approved Indian bank.",
+      "The BIS certification process generally takes 30 to 90 days, depending on the product type, testing requirements, and whether the applicant is domestic or foreign.",
   },
   {
-    question: "Can the BIS license be renewed?",
+    question: "Is BIS certification accepted globally?",
     answer:
-      "Yes. The BIS license is generally valid for 1–2 years and can be renewed upon meeting compliance and document update requirements.",
+      "While BIS certification is specific to India, it enhances global credibility by showcasing compliance with stringent Indian standards. Some BIS-certified products are also accepted under mutual recognition agreements.",
   },
   {
-    question: "What happens if the product fails during BIS lab testing?",
+    question: "How often do I need to renew my BIS license?",
     answer:
-      "If a product fails, BIS may allow corrective action and re-testing. Persistent failure can result in rejection of the application.",
-  },
-  {
-    question: "Is it necessary to hire a BIS certification consultant?",
-    answer:
-      "It's not mandatory but highly recommended. A consultant helps reduce delays, manage compliance, and improve approval chances by ensuring full alignment with BIS protocols.",
-  },
-  {
-    question: "Can a BIS license be suspended or cancelled?",
-    answer:
-      "Yes. BIS may suspend or cancel a license for non-compliance, product failure, misuse of the ISI logo, or audit discrepancies.",
-  },
-  {
-    question: "What documents are needed for the BIS certification process?",
-    answer:
-      "Documents include the FMCS application form, test reports, equipment lists, calibration certificates, factory layout, AIR appointment letter, and proof of fee payment.",
-  },
-  {
-    question: "Can one AIR represent multiple BIS applications?",
-    answer:
-      "Yes, provided they are authorized for each project and have the bandwidth to handle documentation, audits, and communication for each certification.",
-  },
-  {
-    question: "What is the role of a Performance Bank Guarantee?",
-    answer:
-      "A PBG assures BIS that the manufacturer will comply with Indian standards. It is refundable upon license cancellation and mandatory for all FMCS applications obtaining Indian BIS.",
-  },
-  {
-    question: "Is BIS certification recognized outside India?",
-    answer:
-      "While the BIS certificate is an Indian standard, it is respected in trade contexts in many regions that accept Indian compliance, especially in Asia and Africa.",
-  },
-  {
-    question: "How do I know if my product requires BIS certification?",
-    answer:
-      "Check the updated list on the official BIS website or consult with a BIS consultant to verify whether your product falls under mandatory certification.",
+      "BIS licenses must be renewed annually or biennially. Manufacturers must maintain compliance with Indian standards and pass surveillance audits to renew their BIS certificate.",
   },
 ];
 
