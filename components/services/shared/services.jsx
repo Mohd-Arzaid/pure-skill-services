@@ -2,11 +2,11 @@ import React from "react";
 import Link from "next/link";
 
 const imageCircleClass =
-  "flex items-center justify-center rounded-full bg-white border border-[#B5DDEB] w-[72px] h-[72px] md:w-[125px] md:h-[125px] overflow-hidden";
-const imageClass = "w-[72px] h-[72px] md:w-[108px] md:h-[108px] object-contain";
+  "flex items-center justify-center rounded-full bg-white border border-[#B5DDEB] w-[68px] h-[68px] md:w-[115px] md:h-[115px] overflow-hidden";
+const imageClass = "w-[72px] h-[72px] md:w-[100px] md:h-[100px] object-contain";
 
 const boxShadowClass =
-  "relative col-span-1 h-[145px] md:h-[240px] bg-[#B5DDEB] rounded-[15px] md:rounded-[20px] flex items-center justify-center md:block hover:scale-105 transition-all duration-300 border border-[#B5DDEB]";
+  "relative col-span-1 h-[135px] md:h-[225px] bg-[#B5DDEB] rounded-[15px] md:rounded-[20px] flex items-center justify-center md:block hover:scale-105 transition-all duration-300 border border-[#B5DDEB]";
 
 const interFont = "font-inter";
 
