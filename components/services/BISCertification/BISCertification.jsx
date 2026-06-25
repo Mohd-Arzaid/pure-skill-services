@@ -61,7 +61,7 @@ const hero = {
 const OverviewSection = () => {
   return (
     <div className="flex flex-col gap-5">
-      <SectionHeadingTwo>
+      <SectionHeadingTwo as="h1">
         BIS Certification in India | Complete Guide
       </SectionHeadingTwo>
 
@@ -71,7 +71,9 @@ const OverviewSection = () => {
         title="Indian BIS Certification Schemes"
       />
 
-      <SectionHeadingThree as="h2">What is BIS Certification?</SectionHeadingThree>
+      <SectionHeadingThree as="h2">
+        What is BIS Certification?
+      </SectionHeadingThree>
 
       <ServiceParagraph>
         BIS certification refers to the process of obtaining a quality standard
@@ -118,9 +120,9 @@ const OverviewSection = () => {
       <ServiceParagraph>
         Many global and Indian manufacturers deal with the same instances every
         year. For Indian consumers, the BIS mark on a product is not just a
-        logo, it is a mark of trust that the product has been tested for quality,
-        safety, and reliability. For a business, it is the gateway to one of
-        the largest markets in the entire world.
+        logo, it is a mark of trust that the product has been tested for
+        quality, safety, and reliability. For a business, it is the gateway to
+        one of the largest markets in the entire world.
       </ServiceParagraph>
 
       <ServiceParagraph>
@@ -141,7 +143,7 @@ const OverviewSection = () => {
         amendments for the Indian conditions.
       </ServiceParagraph>
 
-      <SectionHeadingThree as="h2">Remarkable Milestones</SectionHeadingThree>
+      <SectionHeadingThree as="div">Remarkable Milestones</SectionHeadingThree>
 
       <ServiceList
         points={[
@@ -153,8 +155,8 @@ const OverviewSection = () => {
       />
 
       <ServiceParagraph>
-        Currently, BIS guarantees the safety, reliability, and standardization of
-        thousands of tools and machinery for Indian users across multiple
+        Currently, BIS guarantees the safety, reliability, and standardization
+        of thousands of tools and machinery for Indian users across multiple
         industries.
       </ServiceParagraph>
 
@@ -237,9 +239,9 @@ const SchemesSection = () => {
         certify satisfaction of Indian Standards pertaining to quality, safety
         and performance benchmarks for the products. This includes factory
         audits, product testing and compliance checks with the BIS parameters.
-        Once the product is passed, the manufacturers are allowed to put the
-        ISI mark on the product. This mark is a trade mark for the manufacturer
-        and helps the customer identify a genuine, ISI certified product.
+        Once the product is passed, the manufacturers are allowed to put the ISI
+        mark on the product. This mark is a trade mark for the manufacturer and
+        helps the customer identify a genuine, ISI certified product.
       </ServiceParagraph>
 
       <ServiceParagraph>
@@ -323,31 +325,31 @@ const SchemesSection = () => {
         simplify the compliance procedures of industries in mechanical and
         electrical domains. Unlike the other certification schemes, Scheme X
         focuses on reducing documentation, assessments, and approvals while
-        ensuring that products adhere to the Indian Standards. The products
-        with the standard mark are of exceptional quality and safety and can be
-        sold after undergoing type testing, factory inspections, and simple
+        ensuring that products adhere to the Indian Standards. The products with
+        the standard mark are of exceptional quality and safety and can be sold
+        after undergoing type testing, factory inspections, and simple
         certification of mandatory requirements.
       </ServiceParagraph>
 
       <ServiceParagraph>
         The scheme X covers heavy machinery and electrical equipment safety
         guidelines for products such as pumps, cranes, transformers, machine
-        tools and other heavy engineering products. These are the most
-        pertinent industries and all where reliability and safety is a
-        necessity. Scheme X is convenient as it shortens the time and costs of
-        the complex BIS certification. It aims to streamline the compliance
-        process in order to facilitate quicker clearance for marketing and
-        enhanced reputation without compromising the quality and safety
-        standards. The enduring and traditional reputation of the Bureau of
-        Indian Standards enables easier international trade, indispensable for
-        companies to meet compliance requirements and boost competitiveness.
+        tools and other heavy engineering products. These are the most pertinent
+        industries and all where reliability and safety is a necessity. Scheme X
+        is convenient as it shortens the time and costs of the complex BIS
+        certification. It aims to streamline the compliance process in order to
+        facilitate quicker clearance for marketing and enhanced reputation
+        without compromising the quality and safety standards. The enduring and
+        traditional reputation of the Bureau of Indian Standards enables easier
+        international trade, indispensable for companies to meet compliance
+        requirements and boost competitiveness.
       </ServiceParagraph>
 
       <ServiceParagraph>
         BIS Scheme X is mandatory to access the Indian heavy machine industry.
-        This new scheme is important for improved market competition,
-        innovation and compliance to regulations which are streamlined through
-        this simplified yet robust structure.
+        This new scheme is important for improved market competition, innovation
+        and compliance to regulations which are streamlined through this
+        simplified yet robust structure.
       </ServiceParagraph>
 
       <ServiceCallout
@@ -356,7 +358,9 @@ const SchemesSection = () => {
         href="/indian-bis-certification-under-scheme-x"
       />
 
-      <SectionHeadingThree>Compulsory Registration Scheme (CRS)</SectionHeadingThree>
+      <SectionHeadingThree>
+        Compulsory Registration Scheme (CRS)
+      </SectionHeadingThree>
 
       <ServiceParagraph>
         The Bureau of Indian Standards (BIS) has developed a BIS certification
@@ -374,10 +378,10 @@ const SchemesSection = () => {
 
       <ServiceParagraph>
         This scheme is essential for protecting Indian consumers from unsafe,
-        substandard, or counterfeit electronics, particularly in the case of
-        the rapidly growing digital market. Both Indian and foreign manufacturers
-        need to acquire CRS certification. The foreign companies must appoint
-        an Authorized Indian Representative AIR to ensure compliance. The BIS
+        substandard, or counterfeit electronics, particularly in the case of the
+        rapidly growing digital market. Both Indian and foreign manufacturers
+        need to acquire CRS certification. The foreign companies must appoint an
+        Authorized Indian Representative AIR to ensure compliance. The BIS
         continually updates the list of products covered under the CRS to
         include new products and technologies and emerging safety issues. For
         manufacturers, obtaining BIS registration under CRS is an added
@@ -399,30 +403,30 @@ const SchemesSection = () => {
         the Hallmarking Scheme and regulated by the Bureau of Indian Standards
         (BIS) which guarantees the purity and genuineness of the jewellery.
         Precious Metal articles are tested at BIS approved Assaying and
-        Hallmarking Centres (AHC) and are then stamped with hallmark signs.
-        This process is only completed if the articles fulfill the Indian
-        Standards laid out at the start. Jewelers must first acquire a BIS
-        license which allows them to sell hallmarked jewellery. This is the
-        only way to do so legally. The jeweler is obliged to undergo and
-        complete product testing, BIS audits, and continuous compliance
-        monitoring to sell hallmarked jewellery. The process, in the end,
-        protects the consumer and ensures the purity, weight and quality and
-        limits malpractice as well as fraud in the jewellery market.
+        Hallmarking Centres (AHC) and are then stamped with hallmark signs. This
+        process is only completed if the articles fulfill the Indian Standards
+        laid out at the start. Jewelers must first acquire a BIS license which
+        allows them to sell hallmarked jewellery. This is the only way to do so
+        legally. The jeweler is obliged to undergo and complete product testing,
+        BIS audits, and continuous compliance monitoring to sell hallmarked
+        jewellery. The process, in the end, protects the consumer and ensures
+        the purity, weight and quality and limits malpractice as well as fraud
+        in the jewellery market.
       </ServiceParagraph>
 
       <ServiceParagraph>
         For Indian consumers, gold and silver are not just ornaments but also
         major investments, which makes trust and transparency essential. The
-        hallmarking jewelry is a mark of assurance for the common citizen in
-        the country that every piece of jewelry for sale has gone through
-        extensive testing against various national benchmarks and fair trading
-        practices. Jewelers can showcase their credibility and market reputation
-        by hallmarking jewelry. The inability to comply with the rules set
-        brings punishment which can include suspension of license. For
-        hallmarking under BIS, it serves as a fulfillment of principle-based
-        and legal obligations. This not only increases consumer satisfaction but
-        also enhances the Indian jewellery market as a whole. This is also the
-        case for smaller retailers as well as larger scale manufacturers.
+        hallmarking jewelry is a mark of assurance for the common citizen in the
+        country that every piece of jewelry for sale has gone through extensive
+        testing against various national benchmarks and fair trading practices.
+        Jewelers can showcase their credibility and market reputation by
+        hallmarking jewelry. The inability to comply with the rules set brings
+        punishment which can include suspension of license. For hallmarking
+        under BIS, it serves as a fulfillment of principle-based and legal
+        obligations. This not only increases consumer satisfaction but also
+        enhances the Indian jewellery market as a whole. This is also the case
+        for smaller retailers as well as larger scale manufacturers.
       </ServiceParagraph>
 
       <SectionHeadingThree>Eco Mark Certification</SectionHeadingThree>
@@ -461,30 +465,29 @@ const SchemesSection = () => {
 
       <ServiceParagraph>
         The Management Systems Certification Scheme (MSCS) initiated by the
-        Bureau of Indian Standards (BIS) is a stepwise procedure which
-        evaluates and recognizes concerned firms for the implementation of
-        internationally accepted and recognized management systems. MSCS
-        framework consists of ISO Standards like ISO 9001 Quality Management,
-        ISO 14001 Environment Management, ISO 45001 Occupational Health and
-        Safety Management System and others. MSCS certifies the firm for the
-        legal operations, consistency, and continuous improvement of the
-        operations. Certified firms go through numerous assessments and audits
-        which helps them build trust among the customers, regulators, and
-        stakeholders which strengthens the guarantee of safety, quality, and
-        sustainability.
+        Bureau of Indian Standards (BIS) is a stepwise procedure which evaluates
+        and recognizes concerned firms for the implementation of internationally
+        accepted and recognized management systems. MSCS framework consists of
+        ISO Standards like ISO 9001 Quality Management, ISO 14001 Environment
+        Management, ISO 45001 Occupational Health and Safety Management System
+        and others. MSCS certifies the firm for the legal operations,
+        consistency, and continuous improvement of the operations. Certified
+        firms go through numerous assessments and audits which helps them build
+        trust among the customers, regulators, and stakeholders which
+        strengthens the guarantee of safety, quality, and sustainability.
       </ServiceParagraph>
 
       <ServiceParagraph>
         BIS is the national standards body of India and is the certifying body
-        for the enhancement of the organization&apos;s reputation and credibility
-        domestically and outside India. MSCS besides fostering accountability
-        through periodic supervision and recertification also frees up a
-        business to actively support public led programs like Make in India and
-        Atmanirbhar Bharat. Besides legal obligation, the scheme also helps in
-        cultivating a culture of integrity, efficiency and fair trading. MSCS
-        encourages the trade and investment by the certified companies and BIS
-        plays a crucial part in the development of the quality ecosystem of the
-        country.
+        for the enhancement of the organization&apos;s reputation and
+        credibility domestically and outside India. MSCS besides fostering
+        accountability through periodic supervision and recertification also
+        frees up a business to actively support public led programs like Make in
+        India and Atmanirbhar Bharat. Besides legal obligation, the scheme also
+        helps in cultivating a culture of integrity, efficiency and fair
+        trading. MSCS encourages the trade and investment by the certified
+        companies and BIS plays a crucial part in the development of the quality
+        ecosystem of the country.
       </ServiceParagraph>
 
       <SectionHeadingThree>LRS – Lab Recognition Scheme</SectionHeadingThree>
@@ -507,20 +510,22 @@ const SchemesSection = () => {
       </ServiceParagraph>
 
       <ServiceParagraph>
-        The LRS is empowering India&apos;s assurance systems by maintaining equity
-        in testing outcomes and ensuring that all outcomes are consistent and
-        globally benchmarked, while accrediting only reliable and sound
-        laboratories. To uphold integrity and transparency, BIS performs
-        regular audits, proficiency tests, and surveillance of recognized
-        schematic labs. Recognition of this certification enables BIS to
-        improve trust from consumers while making the certification process more
-        efficient for industries, as only safe, compliant, and high-quality
-        products will be offered in the Indian market. For organizations that
-        aim to receive BIS certification, collaboration with LRS-approved labs
-        is the most essential to achieve compliance and market access.
+        The LRS is empowering India&apos;s assurance systems by maintaining
+        equity in testing outcomes and ensuring that all outcomes are consistent
+        and globally benchmarked, while accrediting only reliable and sound
+        laboratories. To uphold integrity and transparency, BIS performs regular
+        audits, proficiency tests, and surveillance of recognized schematic
+        labs. Recognition of this certification enables BIS to improve trust
+        from consumers while making the certification process more efficient for
+        industries, as only safe, compliant, and high-quality products will be
+        offered in the Indian market. For organizations that aim to receive BIS
+        certification, collaboration with LRS-approved labs is the most
+        essential to achieve compliance and market access.
       </ServiceParagraph>
 
-      <SectionHeadingThree>Products That Require BIS Certification</SectionHeadingThree>
+      <SectionHeadingThree>
+        Products That Require BIS Certification
+      </SectionHeadingThree>
 
       <ServiceParagraph>
         BIS certification applies to a wide variety of products. Examples
@@ -590,7 +595,6 @@ const ProcessSection = () => (
   </div>
 );
 
-
 const DocumentsSection = () => (
   <div className="flex flex-col gap-5">
     <SectionHeadingTwo>
@@ -637,14 +641,8 @@ const CostSection = () => (
           "Application Fee",
           "One-time, non-refundable fee depending on product type",
         ],
-        [
-          "Testing Charges",
-          "Based on complexity; paid to BIS-recognized labs",
-        ],
-        [
-          "Annual License Fee",
-          "Paid annually to maintain BIS license",
-        ],
+        ["Testing Charges", "Based on complexity; paid to BIS-recognized labs"],
+        ["Annual License Fee", "Paid annually to maintain BIS license"],
         [
           "Inspection/Factory Audit Charges",
           "Charged if BIS officials visit factory (domestic or international travel extra)",
@@ -661,9 +659,9 @@ const CostSection = () => (
     </SectionHeadingThree>
 
     <ServiceParagraph>
-      The cost of obtaining BIS certification varies depending on several factors,
-      including the product category, the applicable Indian Standard (IS), and
-      whether the manufacturer is based in India or overseas.
+      The cost of obtaining BIS certification varies depending on several
+      factors, including the product category, the applicable Indian Standard
+      (IS), and whether the manufacturer is based in India or overseas.
     </ServiceParagraph>
 
     <SectionHeadingThree>
