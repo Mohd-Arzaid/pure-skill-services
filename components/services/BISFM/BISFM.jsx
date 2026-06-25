@@ -380,7 +380,7 @@ const DocumentSection = () => {
         Detailed Breakdown of Each document required to Indian BIS certification
       </SectionHeadingTwo>
 
-      <SectionHeadingThree>1. FMCS Application Form</SectionHeadingThree>
+      <SectionHeadingThree as="div">1. FMCS Application Form</SectionHeadingThree>
 
       <ServiceParagraph>
         This document provides general details about the foreign manufacturer,
@@ -396,7 +396,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="div">
         2. List of Manufacturing Equipment
       </SectionHeadingThree>
 
@@ -409,7 +409,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>3. List of Raw Materials</SectionHeadingThree>
+      <SectionHeadingThree as="div">3. List of Raw Materials</SectionHeadingThree>
 
       <ServiceList
         points={[
@@ -419,7 +419,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>4. List of Testing Equipment</SectionHeadingThree>
+      <SectionHeadingThree as="div">4. List of Testing Equipment</SectionHeadingThree>
 
       <ServiceList
         points={[
@@ -429,7 +429,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>5. Calibration Certificates</SectionHeadingThree>
+      <SectionHeadingThree as="div">5. Calibration Certificates</SectionHeadingThree>
 
       <ServiceList
         points={[
@@ -439,7 +439,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="div">
         6. Factory Layout & Process Flow Diagram
       </SectionHeadingThree>
 
@@ -452,7 +452,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>7. Performance Bank Guarantee</SectionHeadingThree>
+      <SectionHeadingThree as="div">7. Performance Bank Guarantee</SectionHeadingThree>
 
       <ServiceParagraph>
         Issued by an RBI-approved Indian bank, the Performance Bank Guarantee
@@ -467,7 +467,7 @@ const DocumentSection = () => {
         ]}
       />
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="div">
         Common documentation mistakes to avoid while applying for BIS
         certificate or Indian BIS.
       </SectionHeadingThree>
@@ -532,7 +532,7 @@ const ProcessSection = () => {
         Timeframe to Obtain BIS Certificate
       </SectionHeadingTwo>
 
-      <SectionHeadingThree>
+      <SectionHeadingThree as="div">
         Typical Duration from Application to Certificate
       </SectionHeadingThree>
 
