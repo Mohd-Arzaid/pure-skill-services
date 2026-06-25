@@ -731,7 +731,7 @@ const AirSection = () => (
 
 const ConclusionSection = () => (
   <div className="flex flex-col gap-5">
-    <SectionHeadingTwo>Conclusion</SectionHeadingTwo>
+    <SectionHeadingTwo as="div">Conclusion</SectionHeadingTwo>
 
     <ServiceParagraph>
       Having a BIS certification is a necessity for doing business in India. It

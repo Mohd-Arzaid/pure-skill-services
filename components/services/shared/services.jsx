@@ -14,9 +14,9 @@ const Services = () => {
   return (
     <div className={`pt-6 md:pt-8 pb-10 overflow-x-hidden ${interFont}`}>
       <div className="max-w-6xl w-full mx-auto">
-        <h2 className="text-xl md:text-3xl text-center font-inter font-semibold text-neutral-900">
+        <div className="text-xl md:text-3xl text-center font-inter font-semibold text-neutral-900">
           Our Services
-        </h2>
+        </div>
         <p className="text-neutral-600 text-center text-base md:text-lg font-inter">
           India's Best Certificate Consultant
         </p>
