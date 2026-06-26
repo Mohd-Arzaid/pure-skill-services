@@ -7,6 +7,9 @@ import {
   Geist_Mono,
 } from "next/font/google";
 import "./globals.css";
+import TopBar from "@/components/layout/TopBar";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -51,7 +54,12 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${inter.variable} ${roboto.variable} ${playfair.variable} ${poppins.variable} ${geist.variable} ${geistMono.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <TopBar />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
