@@ -1,9 +1,12 @@
-import React from 'react'
+import CommonBreadcrumb from "@/components/common/common-breadcrumb";
 
 const BISFMSpanish = () => {
   return (
-    <div>BISFMSpanish</div>
-  )
-}
+    <div>
+      <CommonBreadcrumb label="Guía de certificación BIS para fabricantes extranjeros" />
+      <div>BISFMSpanish</div>
+    </div>
+  );
+};
 
-export default BISFMSpanish
+export default BISFMSpanish;

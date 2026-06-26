@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import ServiceBreadcrumb from "./service-breadcrumb";
+import CommonBreadcrumb from "@/components/common/common-breadcrumb";
 import ServiceHero from "./service-hero";
 import ServiceIndex from "./service-index";
 import { ServiceSeparator } from "./service-content";
@@ -23,8 +23,8 @@ const ServicePageLayout = ({
     faqs?.length > 0 ? [...sections, { id: "faqs", label: "FAQs" }] : sections;
 
   return (
-    <div className="relative">
-      <ServiceBreadcrumb label={breadcrumbLabel} />
+    <div>
+      <CommonBreadcrumb label={breadcrumbLabel} />
       <ServiceHero
         heading={hero.heading}
         description={hero.description}
