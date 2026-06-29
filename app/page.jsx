@@ -13,6 +13,43 @@ const links = [
     name: "ISIMark",
     href: "/a-guide-to-bis-certification-indian-bis",
   },
+  {
+    name: "Authorized Indian Representative (AIR)",
+    href: "/authorized-indian-representative",
+  },
+  {
+    name: "BIS CRS Registration",
+    href: "/what-is-crs-bis-or-crs-registration",
+  },
+  {
+    name: "CE Mark Certification",
+    href: "/ce-certification",
+  },
+  {
+    name: "Scheme X",
+    href: "/indian-bis-certification-under-scheme-x",
+  },
+  {
+    name: "EPR Registration",
+    href: "/a-guide-on-how-to-obtain-epr-certificate",
+  },
+  {
+    name: "ROHS Registration",
+    href: "/restriction-of-hazardous-substance-rohs-certificate",
+  },
+  {
+    name: "Plastic Waste Management",
+    href: "/epr-certificate-for-plastic-waste-management-pwm",
+  },
+  {
+    name: "EMI/EMC Certification",
+    href: "/emi-emc-certification",
+  },
+  {
+    name: "CDSCO Registration Certificate",
+    href: "/cdsco-registration-certification",
+  }
+
 ];
 
 function ServiceLink({ name, href }) {
